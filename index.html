@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>three.js webgl - geometry - cube</title>
+		<title>About us</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
@@ -130,23 +130,6 @@
 				mesh6b.position.y=-5000;
 				mesh6b.rotation.x=-Math.PI/2;
 
-				/*
-				var path = "/pic/introduction/";//設置路徑
-  			        var directions  = ["intro1", "intro2", "intro3", "intro4", "intro5", "intro6"];//獲取對象
-    			        var format = ".jpg";//格式
-    			        //創建盒子，並設置盒子的大小為( 300, 300, 300)
-        		        var skyGeometry = new THREE.BoxGeometry( 300, 300, 300);
-        			//设置盒子材质
-       				var materialArray = [];
-       				for (var i = 0; i < 6; i++)
-          			materialArray.push( new THREE.MeshBasicMaterial({
-        		        map: THREE.TextureLoader( path + directions[i] + format ),//將圖片紋理貼上
-           			side: THREE.BackSide鏡像翻轉，如果设置镜像翻转，那么只会看到黑漆漆的一片，因为你身处在盒子的内部，所以一定要设置镜像翻转。
-   			        }));
-  			        var skyMaterial = new THREE.MeshFaceMaterial( materialArray );
-				var skyBox = new THREE.Mesh( new THREE.CubeGeometry( 300, 300, 300 ), materialArray );//创建一个完整的天空盒，填入几何模型和材质的参数
-       				scene.add( skyBox );//在场景中加入天空盒
-				*/
 
 
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
