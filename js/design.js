@@ -123,8 +123,13 @@ var tj2=0;
 var ON2=1;
 
 function camerazoomclose(cam,t,ON){
-if(ON==0&&t<=180.4511278)
+if(ON==0&&t<=180.4511278){
+if(cam.position.z>0)
 cam.position.z-=133.3333/60;
+else
+cam.position.z+=133.3333/60;
+}
+
 }
 
 function boxrotate(m1,m2,m3,m4,m5,m6,t)
