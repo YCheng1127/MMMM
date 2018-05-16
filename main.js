@@ -49,7 +49,7 @@ $(document).ready(function(){
     hide(4);
     $("#tool1").click(function(e){make(e,$("#watercan"));});
     $("[class^=tool]").click(function(e){make(e,$(this));});
-    $("#main").mousemove(function (e){
+    $("#main").touchmove(function (e){
         if (drag)
         {
             obj.offset({
