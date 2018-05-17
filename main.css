@@ -30,7 +30,7 @@ body{
 #watercan{
     display: none;
     position: absolute;
-    transform: rotate(-45deg);
+    transition: transform 1s;
     z-index: 3;
 }
 
@@ -49,13 +49,14 @@ body{
     background-image: url("ICON/tool2b.png");
     background-size: cover;
     width:0;
-    z-index: 1;
+    z-index: 1;    
 }
 #tool2b > img{
     position: relative;
     top: 5%;
     left: 10%;
     height:90%;
+    transition: offset 600ms;
 }
 
 #tool3{
@@ -74,6 +75,7 @@ body{
     background-size: cover;
     width:0;
     z-index: 1;
+    transition: transform 1s;
 }
 #tool3b > img{
     position: relative;
@@ -99,6 +101,7 @@ body{
     background-size: cover;
     width:0;
     z-index: 1;
+    transition: transform 1s;
 }
 #tool4b > img{
     position: relative;
