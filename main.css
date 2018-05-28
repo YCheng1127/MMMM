@@ -8,23 +8,92 @@ body{
     background-color:#FFF2CC;
 }
 
+#money{
+    position: absolute;
+    top: 3vh;
+    left: 3vw;
+    z-index: 3;
+}
+
+#moneybar{
+    position: relative;
+    top: 4vh;
+    left: 13.5vw;
+    height: 4vh;
+    width: 25vw;
+    background-image: url("ICON/狀態列外框.png");
+    background-size: 100% 100%;
+    z-index: 3;
+}
+
+#moneybar > p{
+    position: absolute;
+    top: -2vh;
+    right: 1vw;
+    z-index: 3;
+}
+
+#timeicon{
+    position: absolute;
+    top: 3vh;
+    left: 40vw;
+    z-index: 3;
+}
+
+#year{
+    position: absolute;
+    top: 0.7vh;
+    left: 52vw;
+    font-size: 18px;
+    z-index: 3;
+}
+
+#timebar{
+    position: absolute;
+    top: 4vh;
+    left: 49vw;
+    height: 4vh;
+    width: 40vw;
+    background-image: url("ICON/狀態列外框.png");
+    background-size: 100% 100%;
+    z-index: 3;
+}
+
+#timeline{
+    position: relative;
+    top:10%;
+    left:2%;
+    height: 75%;
+    width:1%;
+    z-index: 3;
+}
+
 #map{
     position: absolute;
-    top: 6vh;
-    left: 3vw;
+    top: 2vh;
+    right: 1vw;
+    z-index: 3;
+}
+
+#click{
+    display: none;
+    position: absolute;
+    top: 45vh;
+    left: 45vw;
     z-index: 3;
 }
 
 #store{
     position: absolute;
-    top: 6vh;
-    right: 3vw;
+    bottom: 4vh;
+    left: 81vw;
+    z-index: 2;
 }
 
 #tool1{
     position: absolute;
-    top: 40vh;
-    right: 3vw;
+    bottom: 4vh;
+    left: 62vw;
     z-index: 1;
 }
 #watercan{
@@ -36,84 +105,92 @@ body{
 
 #tool2{
     position: absolute;
-    top: 55vh;
-    right: 3vw;
+    bottom: 4vh;
+    left: 43vw;
     z-index: 2;
 }
 #tool2b{
     position: absolute;
-    top: 55vh;
-    right: 8vw;
-    height: 10vh;
-    width: 60vw;
+    bottom: 8vh;
+    left: 43vw;
+    width: 16.2vw;
     background-image: url("ICON/tool2b.png");
     background-size: cover;
-    width:0;
+    height:0;
     z-index: 1;    
 }
 #tool2b > img{
     position: relative;
-    top: 5%;
-    left: 10%;
-    height:90%;
+    display: inline-block;
+    margin: 2%;
+    top: 8%;
+    left: 4%;
+    height:24%;
+    width:90%;
     transition: offset 600ms;
 }
 
 #tool3{
     position: absolute;
-    top: 70vh;
-    right: 3vw;
+    bottom: 4vh;
+    left: 24vw;
     z-index: 2;
 }
 #tool3b{
     position: absolute;
-    top: 70vh;
-    right: 8vw;
-    height: 10vh;
-    width: 60vw;
+    bottom: 8vh;
+    left: 24vw;
+    width: 16.2vw;
     background-image: url("ICON/tool3b.png");
     background-size: cover;
-    width:0;
+    height:0;
     z-index: 1;
     transition: transform 1s;
 }
 #tool3b > img{
     position: relative;
-    top: 5%;
-    left: 10%;
-    height:90%;
+    display: inline-block;
+    margin: 2%;
+    top: 8%;
+    left: 4%;
+    height:24%;
+    width:90%;
 }
 
 #tool4{
     position: absolute;
-    top: 85vh;
-    right: 3vw;
+    bottom: 4vh;
+    left: 5vw;
     z-index: 2;
     transform: rotate(45deg);
 }
 #tool4b{
     position: absolute;
-    top: 85vh;
-    right: 8vw;
-    height: 10vh;
-    width: 60vw;
+    bottom: 8vh;
+    left: 5vw;
+    width: 16.2vw;
     background-image: url("ICON/tool4b.png");
     background-size: cover;
-    width:0;
+    height:0;
     z-index: 1;
     transition: transform 1s;
 }
 #tool4b > img{
     position: relative;
-    top: 5%;
-    left: 10%;
-    height:90%;
+    display: inline-block;
+    margin: 2%;
+    top: 8%;
+    left: 4%;
+    height:24%;
+    width:90%;
 }
 
 #tree{
     display: block;
     position: relative;
-    top: 65vh;
+    top: 15vh;
+    height: 65vh;
+    width: 85vw;
     margin-left: auto;
     margin-right: auto;
 }
@@ -137,3 +214,69 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+
+#window{
+    display:none;
+    align-items:center;
+    justify-content:center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity:10%;
+	background-color:rgba(40%,40%,40%,0.7);
+    z-index:5;
+}
+
+#window > img{    
+    height: 45vh;
+    width: 60vw;
+    text-align:center;
+    color:white;
+    border-radius:5% 5% 5% 5%;
+	box-shadow:5px 5px 20px 0.3px rgba(20%,20%,40%,0.3);
+}
+
+.tag,.price{
+    width: 15.75%;
+    height: 3.55%;
+    position: absolute;
+}
+
+.price{display: none}
+
+.good{width: 15.75%;height: 9.723%;position: absolute;z-index: 5;}
+
+.tag{z-index: 5;}
+#shop > img:nth-of-type(1){top: 41vh;left: 20vw;}
+#shop > img:nth-of-type(2){top: 41vh;left: 42vw;}
+#shop > img:nth-of-type(3){top: 41vh;left: 64vw;}
+#shop > img:nth-of-type(4){top: 61vh;left: 20vw;}
+#shop > img:nth-of-type(5){top: 61vh;left: 42vw;}
+#shop > img:nth-of-type(6){top: 61vh;left: 64vw;}
+#shop > img:nth-of-type(7){top: 81vh;left: 20vw;}
+#shop > img:nth-of-type(8){top: 81vh;left: 42vw;}
+#shop > img:nth-of-type(9){top: 81vh;left: 64vw;}
+
+#shop > img:nth-of-type(10){top: 31vh;left: 20vw;}
+#shop > img:nth-of-type(11){top: 31vh;left: 42vw;}
+#shop > img:nth-of-type(12){top: 31vh;left: 64vw;}
+#shop > img:nth-of-type(13){top: 51vh;left: 20vw;}
+#shop > img:nth-of-type(14){top: 51vh;left: 42vw;}
+#shop > img:nth-of-type(15){top: 51vh;left: 64vw;}
+#shop > img:nth-of-type(16){top: 71vh;left: 20vw;}
+#shop > img:nth-of-type(17){top: 71vh;left: 42vw;}
+#shop > img:nth-of-type(18){top: 71vh;left: 64vw;}
+
+.price{z-index: 6;}
+#shop > p:nth-of-type(1){top: 39vh;left: 25vw;}
+#shop > p:nth-of-type(2){top: 39vh;left: 47vw;}
+#shop > p:nth-of-type(3){top: 39vh;left: 69vw;}
+#shop > p:nth-of-type(4){top: 59vh;left: 25vw;}
+#shop > p:nth-of-type(5){top: 59vh;left: 47vw;}
+#shop > p:nth-of-type(6){top: 59vh;left: 69vw;}
+#shop > p:nth-of-type(7){top: 79vh;left: 25vw;}
+#shop > p:nth-of-type(8){top: 79vh;left: 47vw;}
+#shop > p:nth-of-type(9){top: 79vh;left: 69vw;}

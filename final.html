@@ -2,19 +2,35 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="screen-orientation" content="portrait">
 		<title>南門木事</title>
-		<link rel="stylesheet" href="main.css">
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+
+		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" type="text/css" href="turtle.css">
 	</head>
 	
 	<body>
+
+		<!--種樹頁面-->
 		<div id = "background">
 			<div id = "world-map"></div>			
 			<div id = "main">
-                <img id = "map" src="ICON/map.png" height = "10%">
-                <img id = "store" src="ICON/store (1).png" height = "10%">
+				<img id = "money" src="ICON/dollar.png" height="6%">
+				<div id = "moneybar">
+					<p>10000</p>
+				</div>
+				<img id = "timeicon" src="ICON/hourglass.png" height="6%">
+				<b id = "year">1950</b>
+				<div id = "timebar">
+					<img id = "timeline" src = "ICON/狀態列內.png">
+				</div>
+                <img id = "map" src="ICON/error.png" height = "4%">
+				<img id = "store" src="ICON/store (1).png" height = "10%">
+				<img id = "click" src = "ICON/click4.gif" height = "10%">
 
 				<img id = "tool1" src="ICON/drop.png" height = "10%">
 				<img id = "watercan" src = "ICON/watering-can (1).png" width = "25%">
@@ -40,16 +56,70 @@
 					<img class = "tool4b" src="ICON/shovel3.png" width = "22%">
 				</div>
 
-                <img id = "tree" src="ICON/sprout.png" height = "25%">              
+				<img id = "tree" src="ICON/tree.png">
+				<div id = "window">
+					<img src="ICON/enter.png">
+				</div>              
 			</div>
 
-			<div id = "shop">
+			<div id = "shop">				
+				<img class = "tag" src = "ICON/money tag.png">					
+				<p class = "price">200</p>
+				<img class = "tag" src = "ICON/money tag.png">					
+				<p class = "price">100</p>
+				<img class = "tag" src = "ICON/money tag.png">
+				<p class = "price">50</p>
+				<img class = "tag" src = "ICON/money tag.png">
+				<p class = "price">100</p>
+				<img class = "tag" src = "ICON/money tag.png">
+				<p class = "price">100</p>
+				<img class = "tag" src = "ICON/money tag.png">
+				<p class = "price">100</p>
+				<img class = "tag" src = "ICON/money tag.png">
+				<p class = "price">100</p>
+				<img class = "tag" src = "ICON/money tag.png">
+				<p class = "price">100</p>
+				<img class = "tag" src = "ICON/money tag.png">
+				<p class = "price">100</p>
+
+				<img class = "good" src="ICON/syringe.png" width = "22%">
+				<img class = "good" src="ICON/syringe2.png" width = "22%">
+				<img class = "good" src="ICON/syringe3.png" width = "22%">
+				<img class = "good" src="ICON/seed.png" width = "22%">
+				<img class = "good" src="ICON/seed2.png" width = "22%">
+				<img class = "good" src="ICON/seed3.png" width = "22%">
+				<img class = "good" src="ICON/shovel.png" width = "22%">
+				<img class = "good" src="ICON/shovel2.png" width = "22%">
+				<img class = "good" src="ICON/shovel3.png" width = "22%">
 				<img id = "shelves" src="ICON/shelves.png">
 			</div>			
 		</div>
-		
+		<!--種樹頁面-->
 
+		<!--烏龜頁面-->
+		<div id="all">
+			<div id="rules">
 		
+				<img id="gamerule" src="turtle/rules.png">
+				<img id="start" src="turtle/start.png">
+				<img id="startpush" src="turtle/startpush.png">
+			</div>
+		
+			<h3 id="Scoresign">&nbspScore</h3>
+			<br>
+			<h3 id="Score"></h3>
+		
+			<h3 id="Timesign">Time</h3>
+			<h3 id="Time"></h3>
+			<div id="turtle-bg">
+				<img id="bg" src="turtle/bg.png">
+				<img id="turtleme" src="turtle/turtle.png">
+				<img id="turtleshocked" src="turtle/turtleshocked.png">
+			</div>
+		</div>
+		<!--烏龜頁面-->
+
 		<script src="main.js"></script>
+		<script src="turtle.js"></script>
 	</body>
 </html>
