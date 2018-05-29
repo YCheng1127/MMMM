@@ -85,14 +85,14 @@ body{
 
 #store{
     position: absolute;
-    bottom: 4vh;
+    top:86vh;
     left: 81vw;
     z-index: 2;
 }
 
 #tool1{
     position: absolute;
-    bottom: 4vh;
+    top:86vh;
     left: 62vw;
     z-index: 1;
 }
@@ -105,7 +105,7 @@ body{
 
 #tool2{
     position: absolute;
-    bottom: 4vh;
+    top:86vh;
     left: 43vw;
     z-index: 2;
 }
@@ -132,7 +132,7 @@ body{
 
 #tool3{
     position: absolute;
-    bottom: 4vh;
+    top:86vh;
     left: 24vw;
     z-index: 2;
 }
@@ -159,7 +159,7 @@ body{
 
 #tool4{
     position: absolute;
-    bottom: 4vh;
+    top:86vh;
     left: 5vw;
     z-index: 2;
     transform: rotate(45deg);
@@ -268,44 +268,40 @@ body{
     background-size: 100% 100%;
 }
 
-.tag,.price{
+.price{
+    display: none;
+    position: absolute;
     width: 15.75%;
     height: 3.55%;
-    position: absolute;
+    z-index: 5;
+    background-image: url("ICON/money tag.png");
+    background-size: 100% 100%;
+    text-align: center;
 }
 
-.price{display: none}
+.good{
+    width: 15.75%;
+    height: 9.723%;
+    position: absolute;
+    z-index: 5;
+}
 
-.good{width: 15.75%;height: 9.723%;position: absolute;z-index: 5;}
+.price:nth-of-type(1){top: 41vh;left: 20vw;}
+.price:nth-of-type(2){top: 41vh;left: 42vw;}
+.price:nth-of-type(3){top: 41vh;left: 64vw;}
+.price:nth-of-type(4){top: 61vh;left: 20vw;}
+.price:nth-of-type(5){top: 61vh;left: 42vw;}
+.price:nth-of-type(6){top: 61vh;left: 64vw;}
+.price:nth-of-type(7){top: 81vh;left: 20vw;}
+.price:nth-of-type(8){top: 81vh;left: 42vw;}
+.price:nth-of-type(9){top: 81vh;left: 64vw;}
 
-.tag{z-index: 5;}
-#shop > img:nth-of-type(1){top: 41vh;left: 20vw;}
-#shop > img:nth-of-type(2){top: 41vh;left: 42vw;}
-#shop > img:nth-of-type(3){top: 41vh;left: 64vw;}
-#shop > img:nth-of-type(4){top: 61vh;left: 20vw;}
-#shop > img:nth-of-type(5){top: 61vh;left: 42vw;}
-#shop > img:nth-of-type(6){top: 61vh;left: 64vw;}
-#shop > img:nth-of-type(7){top: 81vh;left: 20vw;}
-#shop > img:nth-of-type(8){top: 81vh;left: 42vw;}
-#shop > img:nth-of-type(9){top: 81vh;left: 64vw;}
-
-#shop > img:nth-of-type(10){top: 31vh;left: 20vw;}
-#shop > img:nth-of-type(11){top: 31vh;left: 42vw;}
-#shop > img:nth-of-type(12){top: 31vh;left: 64vw;}
-#shop > img:nth-of-type(13){top: 51vh;left: 20vw;}
-#shop > img:nth-of-type(14){top: 51vh;left: 42vw;}
-#shop > img:nth-of-type(15){top: 51vh;left: 64vw;}
-#shop > img:nth-of-type(16){top: 71vh;left: 20vw;}
-#shop > img:nth-of-type(17){top: 71vh;left: 42vw;}
-#shop > img:nth-of-type(18){top: 71vh;left: 64vw;}
-
-.price{z-index: 6;}
-#shop > p:nth-of-type(1){top: 39vh;left: 25vw;}
-#shop > p:nth-of-type(2){top: 39vh;left: 47vw;}
-#shop > p:nth-of-type(3){top: 39vh;left: 69vw;}
-#shop > p:nth-of-type(4){top: 59vh;left: 25vw;}
-#shop > p:nth-of-type(5){top: 59vh;left: 47vw;}
-#shop > p:nth-of-type(6){top: 59vh;left: 69vw;}
-#shop > p:nth-of-type(7){top: 79vh;left: 25vw;}
-#shop > p:nth-of-type(8){top: 79vh;left: 47vw;}
-#shop > p:nth-of-type(9){top: 79vh;left: 69vw;}
+#shop > img:nth-of-type(1){top: 31vh;left: 20vw;}
+#shop > img:nth-of-type(2){top: 31vh;left: 42vw;}
+#shop > img:nth-of-type(3){top: 31vh;left: 64vw;}
+#shop > img:nth-of-type(4){top: 51vh;left: 20vw;}
+#shop > img:nth-of-type(5){top: 51vh;left: 42vw;}
+#shop > img:nth-of-type(6){top: 51vh;left: 64vw;}
+#shop > img:nth-of-type(7){top: 71vh;left: 20vw;}
+#shop > img:nth-of-type(8){top: 71vh;left: 42vw;}
+#shop > img:nth-of-type(9){top: 71vh;left: 64vw;}

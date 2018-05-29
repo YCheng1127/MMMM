@@ -1,0 +1,85 @@
+#mbody2{
+    display:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index:6;
+}
+
+#m2background{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+[id^="D"]{
+  position:absolute ;
+  display:none;
+  height: 15vh;
+  width: 15vh;
+}
+
+[id^="M"]{
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: url("img/newhole.png");
+  background-size: contain;
+}
+
+#D0{
+  top: 40vh;
+  left: 20vw;
+}
+
+#D1{
+  top: 35vh;
+  left: 40vw;
+}
+
+
+#D2{
+  top: 40vh;
+  left: 60vw;
+}
+
+#D3{
+  top: 60vh;
+  left: 22vw;
+
+}
+#D4{
+  top: 55vh;
+  left: 44vw;
+}
+
+#D5{
+  top: 65vh;
+  left: 58vw;
+}
+
+
+#D6{
+  top: 75vh;
+  left: 15vw;
+}
+
+#D7{
+  top: 70vh;
+  left: 38vw;
+}
+
+#D8{
+  top: 80vh;
+  left: 65vw;
+}
+
+#turtleback2{
+  position:absolute;
+  width:10%;
+  bottom:2%;
+  right:3%;
+}
+

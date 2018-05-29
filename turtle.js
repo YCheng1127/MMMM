@@ -1,27 +1,37 @@
-/*
-locOrientation = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation || screen.orientation.lock;
-locOrientation("landscape");*/
-var begin=0;
+$("#window > button:nth-of-type(1)").click(function () {
+  if(id == 0){
+  $("#all").show();
+  $("#window").css("display", "none");
+  document.getElementById("rules").style.display = "block";
+  //$("[name= screen-orientation]").attr("content", "landscape");
+
+var begin=0;//0:not start, 1:start 2:over
 var rules=document.getElementById("rules");
 var start=document.getElementById("start");
+var turtleback=document.getElementById("turtleback");
+//start when press start
 start.addEventListener("click",function(event){
   event.stopPropagation();
-  start.style.display="none";
+  //start.style.display="none";
   begin=1;
   rules.style.display="none";
 },false)
-
+//detect if the button is pressed, if pressed begin==1, then the gamefunction start
 var run=requestAnimationFrame(rungame);
 function rungame(){//st
- if(begin==1){  
+ if(begin==1){ //if start button pressed
+   turtleback.style.display="block";
+//detect if the phone orientation change
 window.addEventListener("orientationchange",onOrientationchange,false);
 
 function onOrientationchange(){
   if(window.orientation === 180 || window.orientation === 0){
     phonestatus=1;//stand
+    turtleback.style.display="block"
   }
   if(window.orientation === 90 || window.orientation === -90){
     phonestatus=2;//lie
+    turtleback.style.display="none";
   }
 }
 
@@ -33,19 +43,20 @@ else
 
 var score=document.getElementById("Score");//point
 var point=0;
-var gametime=document.getElementById("Time");
+var gametime=document.getElementById("Time");//time
 var timeconstant=61;
 
 var turtle=document.getElementById("turtleme");//get turtle
-var turtleshocked=document.getElementById("turtleshocked");
-turtle.style.left="45%";
+var turtleshocked=document.getElementById("turtleshocked");//turtle shockedface
+turtle.style.left="45%";//initital position
 turtleshocked.style.left="45%";
 turtle.style.bottom="0%";
 turtle.style.bottom="0%";
 
 var speed=0;
 var pos=43;//turtle position
-window.addEventListener('deviceorientation', function(event){
+//detect angle then change the speed
+window.addEventListener('deviceorientation', function Detectspeed(event){
     if(phonestatus==2)
       speed=event.beta*0.1;    
     else if(phonestatus==1)
@@ -61,7 +72,7 @@ window.addEventListener('deviceorientation', function(event){
     }
 },false);
 
-var move=requestAnimationFrame(Move);
+var move=requestAnimationFrame(Move);//start the turtle move animation
 var grow=0;
 var growconstant=14;
 var growtime=0;
@@ -79,7 +90,7 @@ var type=[];//for floatingball
 var timedroptest=0;
 function Move(){
   timecount++;
-  console.log(timecount);
+  /*console.log(timecount);*/
   
   gametime.innerHTML=Math.floor(timeconstant-timecount/60);
 
@@ -87,7 +98,7 @@ function Move(){
     pos=pos+speed;
   turtle.style.left=pos+"%";
   turtleshocked.style.left=pos+"%";
-  console.log("grow="+grow);
+  /*console.log("grow="+grow);*/
   //grow the turtle when eat flower
   if(grow==1){
     growtime=growtime+16.66667;
@@ -148,21 +159,27 @@ function Move(){
   score.innerHTML="&nbsp"+point;
 move=requestAnimationFrame(Move);
 
-  if(timecount/60>60)
+  if(timecount/60>60){
+    begin=2;//times up and turn begin to 2 for closing all the request animation and eventlistener
     cancelAnimationFrame(move);
+  }
 }
 
-
+/*if(begin == 2)
+{
+window.removeEventListener("touchstart",JUMP(event),false);//I tried to cancel the eventlistener but i failed
+window.removeEventListener('deviceorientation',Detectspeed,false);//neither
+}*/
 
 //make the turtle jump
-window.addEventListener("touchstart", function(event){
+window.addEventListener("touchstart",function JUMP(event){
   if(on == 1)
     event.preventDefault();
   else{
   on=1;
     }
 },false);
-begin=0;
+begin=0;//prevent the turtle animation to start so many times
 
 //make a blacktomb
 var floatblack=function(k){
@@ -259,4 +276,18 @@ var dropbomb=function(ball,turtle,i){
 } 
 }//end if
 run=requestAnimationFrame(rungame);
+/*if(begin==2){
+  cancelAnimationFrame(rungame); 
+}*/
 }//end
+
+  }
+});
+
+turtleback.addEventListener("click",function(event){
+  /*event.stopPropagation();*/
+  //alert("hello");
+  /*You can code here*/
+  $("#all").hide();
+  return;
+},false)
