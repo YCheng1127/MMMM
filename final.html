@@ -8,30 +8,144 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 		<script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-touch-events/1.0.9/jquery.mobile-events.min.js"></script>
 
-		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="plant.css">
 		<link rel="stylesheet" type="text/css" href="turtle.css">
 		<link href="2.css" rel="stylesheet">
 		<link href="3.css" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="mid.css">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="achievement.css">
+		<link rel="stylesheet" type="text/css" href="setting.css">
+		<link rel="stylesheet" type="text/css" href="friend.css">
 	</head>
 	
 	<body>
-
+		<div id = "home">
+			<audio id="music" loop="loop">
+				<source src="music.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+			</audio>
+			
+			<div id="loading">
+				<div id="logo">
+					<div id="load">
+						<b>L O A D I N G</b>
+					</div>
+				</div>
+			</div>
+			
+			<div id="login">
+				<div id="log">
+					<b>L O G I N</b>
+				</div>
+				<img id="facebook" src="facebook.png" height="15%">
+				<img id="google" src="google.png" height="15%">
+			</div>
+			
+			<div id="main">
+				<img id="sun" src="sun.png" height="20%">
+				<img id="clouds" src="clouds.png" height="20%">
+				<img id="settings" src="settings.png" height="5%">
+				<div id="box">
+					<img id="cloud" src="cloud.png" height="20%">
+					<img id="dollar1" src="dollar.png" height="4%">
+					<img id="dollar2" src="dollar.png" height="4%">
+					<img id="dollar3" src="dollar.png" height="4%">
+					<img id="dollar4" src="dollar.png" height="4%">
+					<img id="dollar5" src="dollar.png" height="4%">
+				</div>
+				<img id="forest" src="forest.png" height="20%">
+				<img id="tree" src="tree.png" height="20%">
+				<img id="store" src="store.png" height="20%">
+				<img id="gate" src="gate.png" height="20%">
+			</div>
+			
+			<div id="achievement">
+				<img id="sun_back" class="back" src="back.png" height="10%">
+				<div id="a1">
+					<img id="pic1" src="achieve1.png">
+				</div>
+				<div id="a2">
+					<img id="pic2" src="achieve2.png">
+				</div>
+				<div id="a3">
+					<img id="pic3" src="achieve3.png">
+				</div>
+				<div id="a4">
+					<img id="pic4" src="achieve2.png">
+				</div>
+				<div id="a5">
+					<img id="pic5" src="achieve3.png">
+				</div>
+				<div id="a6">
+					<img id="pic6" src="achieve1.png">
+				</div>
+				<div id="a7">
+					<img id="pic7" src="achieve3.png">
+				</div>
+				<div id="a8">
+					<img id="pic8" src="achieve1.png">
+				</div>
+				<div id="a9">
+					<img id="pic9" src="achieve2.png">
+				</div>
+				<div id="content"></div>
+			</div>
+			
+			<div id="set">
+				<img id="set_back" class="back" src="back.png" height="10%">
+				<div id="sound">Sound</div>
+				<label class="switch">
+					<input id="switch" type="checkbox" checked="checled">
+					<span class="slider round"></span>
+				</label>
+				<div id="container">
+					<div id="intro">
+						<b>大南門‧大榕樹</b>
+						<br>
+						<br> 一棵樹苗等待歲月的提拔
+						<br> 城樓建好的初瞬意氣風發
+						<br> 屹立不搖的身影
+						<br> 看透過往雲煙
+						<br> 我用我的茁壯
+						<br> 陪伴你的滄桑
+					</div>
+				</div>
+				<div id="frame">
+					<div id="about">About app</div>
+				</div>
+			</div>
+			
+			<div id="friend">
+				<img id="friend_back" src="back.png" height="10%">
+				<img id="friend1" src="wood.png" height="13%">
+				<img id="friend2" src="wood.png" height="18%">
+				<img id="friend3" src="wood.png" height="15%">
+				<img id="friend4" src="wood.png" height="16%">
+				<img id="friend5" src="wood.png" height="17%">
+				<img id="friend6" src="wood.png" height="14%">
+			</div>
+			
+			<div id="fake_friend">
+			
+			</div>
+		</div>
 		<!--種樹頁面-->
-		<div id = "background">
-			<div id = "world-map"></div>			
-			<div id = "main">
+		<div id = "pbackground">			
+			<div id = "plant">
 				<img id = "money" src="ICON/dollar.png" height="6%">
 				<div id = "moneybar">
 					<p>10000</p>
 				</div>
 				<img id = "timeicon" src="ICON/hourglass.png" height="6%">
-				<b id = "year">1950</b>
+				<b id = "thisyear">1950</b>
 				<div id = "timebar">
 					<img id = "timeline" src = "ICON/狀態列內.png">
 				</div>
-                <img id = "map" src="ICON/error.png" height = "4%">
-				<img id = "store" src="ICON/store (1).png" height = "10%">
+                <img id = "goback" src="ICON/error.png" height = "4%">
+				<img id = "storeicon" src="ICON/store (1).png" height = "10%">
 				<img id = "click" src = "ICON/click4.gif" height = "10%">
 
 				<img id = "tool1" src="ICON/drop.png" height = "10%">
@@ -58,7 +172,7 @@
 					<img class = "tool4b" src="ICON/shovel3.png" width = "22%">
 				</div>
 
-				<img id = "tree" src="ICON/tree.png">
+				<img id = "bigtree" src="ICON/tree.png">
 				<div id = "window">
 					<img src="ICON/enter.png">
 					<p>從葉脈深處傳來記<br>憶的脈動，是否探<br>索？</p>
@@ -173,8 +287,9 @@
 		</div>
 		<!--挖洞頁面-->
 
-		<script src="main.js"></script>
+		<script src="plant.js"></script>
 		<script src="turtle.js"></script>
 		<script src="2.js"></script>
+		<script src="mid.js"></script>
 	</body>
 </html>

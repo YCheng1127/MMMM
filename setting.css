@@ -1,0 +1,112 @@
+#set{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #ff9900;
+}
+
+#set_back{
+	position: absolute;
+	left: 3vw;
+	top: 6vh;
+}
+
+#sound{
+	position: absolute;
+	top: 25vh;
+	left: 15vw;
+	font-size: 4vh;
+	font-family: sans-serif;
+	color: #fff;	
+}
+
+.switch{
+	position: absolute;
+	top: 25vh;
+	left: 70vw;
+	display: inline-block;
+	width: 20vw;
+	height: 5vh;
+}
+
+.switch input{
+	display: none;
+}
+
+.slider.round{
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: 0.4s;
+	border-radius: 5vh;
+}
+
+.slider.round:before{
+	position: absolute;
+	content: "";
+	height: 4vh;
+	width: 9vw;
+	left: 1vw;
+	top: 0.5vh;
+	background-color: #fff;
+	transition: 0.4s;
+	border-radius: 2.5vh 2.5vh 2.5vh 2.5vh;
+}
+
+input:checked + .slider{
+	background-color: #2196F3;
+}
+
+input:focus + .slider{
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before{
+	transform: translateX(9vw);
+}
+
+#frame{
+	position: absolute;
+	top: 80vh;
+	left: 20vw;
+	width: 60vw;
+	height: 5vh;
+	border-radius: 2.5vh 2.5vh 2.5vh 2.5vh;
+	background-color: #999999;
+}
+
+#about{	
+	position: absolute;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 4vh;
+	font-family: sans-serif;
+	color: #fff;
+}
+
+#container{
+	display: table;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: -1;
+}
+
+#intro{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 5vh;
+	font-family: Microsoft JhengHei;
+	background-color: #66ff66;
+}

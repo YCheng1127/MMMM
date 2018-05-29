@@ -1,0 +1,86 @@
+#achievement{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #ffff66;
+}
+
+#sun_back{
+	position: absolute;
+	left: 3vw;
+	top: 6vh;
+}
+
+img[id^="pic"]{
+	width: 20vw;
+	background-color: #999999;
+	border-radius: 50%;
+}
+
+#a1{
+	position: absolute;
+	top: 20%;
+	left: 10%;
+	z-index: 1;
+}
+
+#a2{
+	position: absolute;
+	top: 20%;
+	left: 40%;
+}
+
+#a3{
+	position: absolute;
+	top: 20%;
+	left: 70%;
+}
+
+#a4{
+	position: absolute;
+	top: 45%;
+	left: 10%;
+}
+
+#a5{
+	position: absolute;
+	top: 45%;
+	left: 40%;
+}
+
+#a6{
+	position: absolute;
+	top: 45%;
+	left: 70%;
+}
+
+#a7{
+	position: absolute;
+	top: 70%;
+	left: 10%;
+}
+
+#a8{
+	position: absolute;
+	top: 70%;
+	left: 40%;
+}
+
+#a9{
+	position: absolute;
+	top: 70%;
+	left: 70%;
+}
+
+#content{
+	position: absolute;
+	top: 60%;
+	left: 0;
+	width: 100vw;
+	margin: auto;
+	text-align: center;
+	font-size: 4vh;
+	font-family: sans-serif;
+}

@@ -1,0 +1,50 @@
+#friend{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url("mountain.png");
+	background-repeat: no-repeat;
+	background-size: 100vw 100vh;
+}
+
+#friend_back{
+	position: absolute;
+	left: 3vw;
+	top: 6vh;
+}
+
+#friend1{
+	position: absolute;
+	top: 62%;
+	left: 3%;
+}
+
+#friend2{
+	position: absolute;
+	top: 80%;
+	left: 10%;
+}
+
+#friend3{
+	position: absolute;
+	top: 63%;
+	left: 33%;
+}	
+
+#friend4{
+	position: absolute;
+	top: 55%;
+	left: 60%;
+}
+#friend5{
+	position: absolute;
+	top: 82%;
+	left: 45%;
+}
+#friend6{
+	position: absolute;
+	top: 72%;
+	left: 75%;
+}	
