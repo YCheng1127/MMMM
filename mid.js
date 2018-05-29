@@ -181,7 +181,7 @@ var working = false;
 var clicked = false;
 var obj = null;
 
-function slide(i){
+/*function slide(i){
 	$("#tool"+i).click(function(){
 		if(!tool[i]){   
 			$("#tool"+i+"b").animate({"width":"60vw"},350,function(){
@@ -210,7 +210,7 @@ function make(e,dom){
 	$("#plant").append(obj);
 	obj.hide();
 	clicked = true;
-}
+}*/
 
 function sun_click(){
 	var su = document.getElementById('sun');
