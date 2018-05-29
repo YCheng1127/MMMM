@@ -138,6 +138,7 @@ function tree_click(){
 		$('#main').animate({top:-w_height,opacity:0},1000);
 		//$('#plant').animate({top:0,opacity:1},1000);
 		$("#pbackground").show();
+		timer();
 	},false);
 }
 

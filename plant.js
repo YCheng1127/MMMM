@@ -69,7 +69,7 @@ function timer() {
 
 $(document).ready(function () {
   leaf.css({ "left": "10vw", "position": "relative" });
-  timer();
+  //timer();
   document.body.addEventListener('touchmove', function (event) {
     event.preventDefault();
   }, false);
