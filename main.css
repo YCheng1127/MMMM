@@ -111,9 +111,9 @@ body{
 }
 #tool2b{
     position: absolute;
-    bottom: 8vh;
+    top:90vh;
     left: 43vw;
-    width: 16.2vw;
+    width: 14.6vw;
     background-image: url("ICON/tool2b.png");
     background-size: cover;
     height:0;
@@ -138,9 +138,9 @@ body{
 }
 #tool3b{
     position: absolute;
-    bottom: 8vh;
+    top:90vh;
     left: 24vw;
-    width: 16.2vw;
+    width: 14.6vw;
     background-image: url("ICON/tool3b.png");
     background-size: cover;
     height:0;
@@ -166,9 +166,9 @@ body{
 }
 #tool4b{
     position: absolute;
-    bottom: 8vh;
+    top:90vh;
     left: 5vw;
-    width: 16.2vw;
+    width: 14.6vw;
     background-image: url("ICON/tool4b.png");
     background-size: cover;
     height:0;

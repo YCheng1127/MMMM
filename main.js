@@ -12,7 +12,7 @@ var id;
 function slide(i) {
   $("#tool" + i).click(function () {
     if (!tool[i]) {
-      $("#tool" + i + "b").animate({ "height": "37vh" }, 350, function () { tool[i] = true; });
+      $("#tool" + i + "b").animate({ "height": "37vh","top":"55vh"}, 350, function () { tool[i] = true; });
     }
   });
 }
@@ -21,7 +21,7 @@ function hide(i) {
   $("*").click(function () {
     if (tool[i] && !working) {
       working = true;
-      $("#tool" + i + "b").animate({ "height": "0vh" }, 350, function () { tool[i] = false; working = false; });
+      $("#tool" + i + "b").animate({ "height": "0vh", "top": "90vh"}, 350, function () { tool[i] = false; working = false; });
     }
   });
 }
