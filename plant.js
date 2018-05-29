@@ -43,7 +43,7 @@ function timer() {
     time++;
     $("#thisyear").text(1950 + time);
     $("#timeline").css("width", 1 + time * 2 + "%");
-    if (time % 2 && time <= 10)//落葉落下
+    if (time % 2 && time <= 3)//落葉落下
     {
       var drop = 0;
       var n = 5 + Math.random() * 75;
