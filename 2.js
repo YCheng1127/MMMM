@@ -27,7 +27,7 @@ $("#btn").click(function () {
     appear();
 });
 
-$("mbody2").click(function () {
+
 var timeup = 45;
 var timeup2 = setInterval(function () {
     timeup--;
@@ -35,7 +35,7 @@ var timeup2 = setInterval(function () {
     if (timeup ==0)
         clearInterval(timeup2);
 }, 1000);
-});
+
 
 $("mbody2").click(function () {
     $("finish").show();
