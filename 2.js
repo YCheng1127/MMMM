@@ -27,6 +27,7 @@ $("#btn").click(function () {
     appear();
 })
 
+$(#mbody").click(function() {
 var timeup = 100;
 var timeup2 = setInterval(function () {
     timeup--;
@@ -34,6 +35,8 @@ var timeup2 = setInterval(function () {
     if (timeup ==0)
         clearInterval(timeup2);
 }, 1000);
+})
+;
 
 $("mbody2").click(function () {
     $("finish").show();
