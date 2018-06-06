@@ -27,7 +27,7 @@ $("#btn").click(function () {
     appear();
 })
 
-var timeup = 46;
+var timeup = 100;
 var timeup2 = setInterval(function () {
     timeup--;
     $("#timeup").text(timeup);
