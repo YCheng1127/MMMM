@@ -20,13 +20,15 @@ $("#btn").click(function () {
             setTimeout(function () { $('#D' + num).css('display', 'none') }, 500)
         })
         $('#M' + num).css('background-image', 'url(img/newhole.png)');
-        if (count < 30) {
+        if (count < 31) {
             setTimeout(function () { appear() }, 1500)
         }
     }
     appear();
 })
 
+var timeup = 46;
+var timeup2 = setInterval(function () {
 
 $("mbody2").click(function () {
     $("finish").show();
