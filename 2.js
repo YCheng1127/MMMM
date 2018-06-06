@@ -25,7 +25,7 @@ $("#btn").click(function () {
         }
     }
     appear();
-})
+});
 
 $("mbody2").click(function () {
 var timeup = 45;
