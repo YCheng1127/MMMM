@@ -27,16 +27,15 @@ $("#btn").click(function () {
     appear();
 })
 
-$(#mbody").click(function() {
-var timeup = 100;
+$("mbody2").click(function () {
+var timeup = 45;
 var timeup2 = setInterval(function () {
     timeup--;
     $("#timeup").text(timeup);
     if (timeup ==0)
         clearInterval(timeup2);
 }, 1000);
-})
-;
+});
 
 $("mbody2").click(function () {
     $("finish").show();
