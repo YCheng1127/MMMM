@@ -1,0 +1,93 @@
+@media only screen and (max-width: 800px){
+	/*body{
+		background-color: #ccc;
+	}*/
+	#loading{
+		background-color: #000;
+	}
+	/*#settings{
+		height: 50%;
+	}*/
+}
+
+body{
+	overflow-x: hidden;
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	background-color: #fff2cc;
+}
+
+#loading{
+	/*display: none;*/
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	background-color: #ffffcc;
+}
+
+#logo{
+	width: 40vw;
+	height: 40vh;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	background-color: #fff;
+}
+
+#load{
+	position: relative;
+	top: 110%;
+	text-align: center;
+	word-break: break-all;
+	font-size: 4vh;
+	font-family: sans-serif;
+}
+
+#login{
+	/*display: none;*/
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	background-color: #ffff99;
+}
+
+#log{
+	position: relative;
+	top: 35%;
+	text-align: center;
+	word-break: break-all;
+	font-size: 6vh;
+	font-family: sans-serif;
+}
+
+#facebook{
+	position: absolute;
+	left: 35%;
+	top: 55%;
+	transform: translate(-50%,-50%);
+	/*width: 10vw;
+	height: 10vh;*/
+	/*background-image: url("facebook.png");*/
+	background-size: 10vw 10vh;
+	background-repeat: no-repeat;
+}
+
+#google{	
+	position: absolute;
+	left: 65%;
+	top: 55%;
+	transform: translate(-50%,-50%);
+	/*width: 10vw;
+	height: 10vh;*/
+	/*background-image: url("google.png");*/
+	background-size: 10vw 10vh;
+	background-repeat: no-repeat;
+}
