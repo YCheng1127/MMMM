@@ -95,6 +95,7 @@
                 success:function(data){
                   console.log(data);//得到使用者資料，或是得到建立好的資料
                 }
+
             })
             //傳送完成
 

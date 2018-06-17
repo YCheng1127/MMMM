@@ -132,21 +132,39 @@ app.post('/FBcatchuser',urlencodedParser,function(req,res){
         ];
        userdata=JSON.stringify(userdata);
        console.log(userdata);
-       res.send(userdata);
+       
       }
     else if(newornot == 0){//舊使用者，讀取資料
       db.con(function(connect){
         connect.query("SELECT * FROM user WHERE id = '" + id + "'", function(err,result){
           if(err) throw err;
           userdata=JSON.stringify(result);
-          res.send(userdata);
+        
         })    
       })
     
     }
   },1000); 
-  
+  //獲取朋友資料
+  setTimeout(function(){
+            db.con(function(connect){
+              var sql="SELECT * FROM user WHERE ";
+              for(i=0;i<friends.length;i++){
+                if(i!=friends.length-1 )
+                  sql = sql + "id = '" + friends[i].id + "' or ";
+                else 
+                  sql = sql + "id = '" + friends[i].id + "'";
+              }
+              connect.query(sql,function(err,result){
+                if(err) throw err;
+                console.log(result);
+                console.log(sql);
+                console.log(userdata+JSON.stringify(result));
+                res.send(userdata+JSON.stringify(result));
+              })   
+            })
 
+  },1500);
   
 })
 /*
