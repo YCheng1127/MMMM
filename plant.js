@@ -3,12 +3,12 @@ var tool = [false, false, false, false, false];
 var working = false;
 var use = false;
 var obj = null;
+var tool = 0;
 var viewshop = true;
 var leaf = $("<img class = 'leaf' src = 'ICON/leaf.png' height = 10% >");
-var drop = 0;
 var money = 10000;
 var id;
-var dropid;
+var dropid = [0,0,0,0,0,0,0,0,0,0,0];
 
 function getdegree(obj) {
 	var matrix = obj.css("-webkit-transform") ||
@@ -43,7 +43,6 @@ function hide(i) {
 }
 
 function make(dom) {
-	//event.stopPropagation();
 	obj = dom.clone();
 	obj.css("position", "absolute");
 	$("#plant").append(obj);
@@ -57,26 +56,35 @@ function timer() {
 	var num = 0;
 	$("#bigtree").click(function () {
 		time++;
-		make($("#watercan"));		
+		//make($("#watercan"));		
 		if (!(time % 3)) {
 			$("#thisyear").text(1950 + time / 3);
-			$("#timeline").css("width", 1 + time / 3 * 2 + "%");
-			var drop = 0;
-			var n = 5 + Math.random() * 75;//振幅
-			var a = Math.random() * 6;//相角
-			var newleaf = leaf.clone();
-			newleaf.attr("id", "leaf" + num);
+			$("#timeline").css("width", 1 + time / 3 * 2 + "%");		
+			dropping(num);
 			num++;
-			newleaf.css({ "top": "30vh", "left": n + "vw", "position": "absolute" });
-			$("#plant").append(newleaf);
-			dropid = setInterval(function () {//落葉
-				newleaf.css({ "top": 30 + drop + "vh", "left": n + 8 * Math.sin(drop / 2 + a) + "vw", "transform": "rotate(" + (Math.sin(drop / 2 + a) * 25 - 10) + "deg)" });
-				drop += 0.16;
-				if (drop >= 45)
-					clearInterval(dropid);
-			}, 16.6);
 		}
 	})
+}
+
+function dropping(num){
+	var drop = 0
+	var n = 5 + Math.random() * 75;//振幅
+	var a = Math.random() * 6;//相角
+	var newleaf = leaf.clone();
+	newleaf.attr("id", "leaf" + num);
+	newleaf.css({ "top": "30vh", "left": n + "vw", "position": "absolute" });
+	$("#plant").append(newleaf);
+	dropid[num] = setInterval(function () {//落葉
+		newleaf.css({
+			"top": 30 + drop + "vh", "left": n + 8 * Math.sin(drop / 2 + a) + "vw", "transform": "rotate(" + (Math.sin(drop/ 2 + a) * 25 - 10) + "deg)" });
+				drop += 0.16;
+			if(drop >= 45)
+		clearInterval(dropid[num]);
+	}, 16.6);
+}
+
+function dropagain(){
+
 }
 
 $(document).ready(function () {
@@ -116,35 +124,55 @@ $(document).ready(function () {
 	hide(2);
 	hide(3);
 	hide(4);
-	$("#tool1").click(function (e) { make($("#watercan")); })
-	$("[class^=tool]").click(function (e) { make($(this)); })
+	$("#tool1").on("vmousedown",function () {
+		use = false;
+		$(this).attr("src","ICON2/吹風機按鈕按下去.png")
+	})
+	$("#tool1").on("vmouseup", function () {
+		$(this).attr("src", "ICON2/吹風機按鈕.png")
+		tool = 1;
+	})
+	$("#tool2").on("vmousedown", function () {
+		use = false;
+		$(this).attr("src", "ICON2/澆水器按鈕按下去.png")
+	})
+	$("#tool2").on("vmouseup", function (e) {
+		$(this).attr("src", "ICON2/澆水器按鈕.png")
+		tool = 2;
+		//$("#click").show();
+		setTimeout(function () {
+		use = true;
+		},100)
+	})
+
 	$("#plant").click(function (e) {
 		//stopImmediatePropagation();
 		if (use) {
-			$("#click").hide();
-			obj.offset({
-				top: e.pageY - 40,
-				left: e.pageX - 40
-			});
+			if (tool== 2)
+				obj = $("#watercan");
+			//$("#click").hide();
+			obj.css({"top": e.pageY - 40,"left": e.pageX - 40});
 			obj.show();
 			obj.css("transform");
-			if (obj.attr("src") == "ICON/watering-can (1).png")
-				obj.css("transform", "rotate(-45deg)");
-			else if (obj.attr("class") == "tool2b" || obj.attr("class") == "tool4b")
+			if (obj.attr("id") == "watercan")
+				obj.css("transform", "rotate(45deg)");
+			/*else if (obj.attr("class") == "tool2b" || obj.attr("class") == "tool4b")
 				obj.animate({ "top": e.pageY + 10 + "px", "left": e.pageX - 100 + "px" }, 500, function () {use = false;obj.remove();});
 			else if (obj.attr("class") == "tool3b")
 				obj.effect("bounce");
 			else
-				obj;
+				obj;*/
 			setTimeout(function () {
-				use = false;
-				obj.remove();
+				//use = false;
+				obj.hide();
+				obj.css("transform", "rotate(0deg)");
 			}, 500);
 		}		
 	});
 	$("#plant").on("vmousemove", ".leaf", function (e) {
 		//event.stopPropagation();
-		clearInterval(dropid);
+		clearInterval(dropid[parseInt($(this).attr("id"))]);
+		console.log(parseInt($(this).attr("id")));
 		$(this).offset({
 			top: e.pageY - 40,
 			left: e.pageX - 40
@@ -157,12 +185,11 @@ $(document).ready(function () {
 			var n = (e.pageX - 45) / document.documentElement.clientWidth * 100;
 			var a = Math.random() * 6;
 			var degree = Math.asin((getdegree($(e.target)) + 10)/25)-a
-			console.log(degree)
-			dropid = setInterval(function () {//落葉
+			dropid[parseInt($(this).attr("id"))] = setInterval(function () {//落葉
 				$(e.target).css({ "top": y + drop + "vh", "left": n + 8 * Math.sin(degree + drop / 2 + a) + "vw", "transform": "rotate(" + (Math.sin(degree + drop / 2 + a) * 25 - 10) + "deg)" });
 				drop += 0.16;				
 				if (y + drop >= 75)
-					clearInterval(dropid);
+					clearInterval(dropid[parseInt($(this).attr("id"))]);
 			}, 16.6);
 		}
 	});

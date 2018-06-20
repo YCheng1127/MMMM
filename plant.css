@@ -15,50 +15,27 @@ body{
 #plant{
     height: 100vh;
     width: 100vw;   
-    background-color:#FFF2CC;
-}
-
-#money{
-    position: absolute;
-    top: 3vh;
-    left: 3vw;
-    z-index: 3;
-}
-
-#moneybar{
-    position: relative;
-    top: 4vh;
-    left: 13.5vw;
-    height: 4vh;
-    width: 25vw;
-    background-image: url("ICON/狀態列外框.png");
+    /*background-color:#FFF2CC;*/
+    background-image: url("ICON2/種樹頁底圖.png");
     background-size: 100% 100%;
-    z-index: 3;
-}
-
-#moneybar > p{
-    position: absolute;
-    top: -2vh;
-    right: 1vw;
-    z-index: 3;
 }
 
 #timeicon{
     position: absolute;
-    top: 3vh;
-    left: 40vw;
+    top: 2vh;
+    left: 7vw;
     z-index: 3;
 }
 
 #thisyear{
     position: absolute;
     top: 0.7vh;
-    left: 52vw;
-    font-size: 18px;
+    left: 20vw;
+    font-size: 5.5vw;
     z-index: 3;
 }
 
-#timebar{
+/*#timebar{
     position: absolute;
     top: 4vh;
     left: 49vw;
@@ -67,13 +44,13 @@ body{
     background-image: url("ICON/狀態列外框.png");
     background-size: 100% 100%;
     z-index: 3;
-}
+}*/
 
 #timeline{
-    position: relative;
-    top:10%;
-    left:2%;
-    height: 75%;
+    position: absolute;
+    top:4.1%;
+    left:20%;
+    height: 3.5%;
     width:1%;
     z-index: 3;
 }
@@ -93,19 +70,13 @@ body{
     z-index: 3;
 }
 
-#storeicon{
-    position: absolute;
-    top:86vh;
-    left: 81vw;
-    z-index: 2;
-}
-
 #tool1{
     position: absolute;
-    top:86vh;
-    left: 62vw;
+    top:85vh;
+    left: 10vw;
     z-index: 1;
 }
+
 #watercan{
     display: none;
     position: absolute;
@@ -115,92 +86,17 @@ body{
 
 #tool2{
     position: absolute;
-    top:86vh;
-    left: 43vw;
+    top:85vh;
+    left: 80vw;
     z-index: 2;
-}
-#tool2b{
-    position: absolute;
-    top:90vh;
-    left: 43vw;
-    width: 14.6vw;
-    background-image: url("ICON/tool2b.png");
-    background-size: cover;
-    height:0;
-    z-index: 1;    
-}
-#tool2b > img{
-    position: relative;
-    display: inline-block;
-    margin: 2%;
-    top: 8%;
-    left: 4%;
-    height:24%;
-    width:90%;
-    transition: offset 600ms;
-}
-
-#tool3{
-    position: absolute;
-    top:86vh;
-    left: 24vw;
-    z-index: 2;
-}
-#tool3b{
-    position: absolute;
-    top:90vh;
-    left: 24vw;
-    width: 14.6vw;
-    background-image: url("ICON/tool3b.png");
-    background-size: cover;
-    height:0;
-    z-index: 1;
-    transition: transform 1s;
-}
-#tool3b > img{
-    position: relative;
-    display: inline-block;
-    margin: 2%;
-    top: 8%;
-    left: 4%;
-    height:24%;
-    width:90%;
-}
-
-#tool4{
-    position: absolute;
-    top:86vh;
-    left: 5vw;
-    z-index: 2;
-    transform: rotate(45deg);
-}
-#tool4b{
-    position: absolute;
-    top:90vh;
-    left: 5vw;
-    width: 14.6vw;
-    background-image: url("ICON/tool4b.png");
-    background-size: cover;
-    height:0;
-    z-index: 1;
-    transition: transform 1s;
-}
-#tool4b > img{
-    position: relative;
-    display: inline-block;
-    margin: 2%;
-    top: 8%;
-    left: 4%;
-    height:24%;
-    width:90%;
 }
 
 #bigtree{
     display: block;
     position: relative;
-    top: 15vh;
-    height: 65vh;
-    width: 85vw;
+    top: 30vh;
+    height: 49vh;
+    width: 90vw;
     margin-left: auto;
     margin-right: auto;
 }
