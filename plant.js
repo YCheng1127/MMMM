@@ -171,8 +171,8 @@ $(document).ready(function () {
 	});
 	$("#plant").on("vmousemove", ".leaf", function (e) {
 		//event.stopPropagation();
-		clearInterval(dropid[parseInt($(this).attr("id"))]);
-		console.log(parseInt($(this).attr("id")));
+		clearInterval(dropid[parseInt($(e.target).attr("id"))]);
+		console.log(parseInt($(e.target).attr("id")));
 		$(this).offset({
 			top: e.pageY - 40,
 			left: e.pageX - 40
