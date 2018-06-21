@@ -15,7 +15,6 @@ body{
 	position: fixed;
 	margin: 0;
 	padding: 0;
-  /*touch-action: manipulation;*/
 	//background-color: #fff2cc;
 }
 
@@ -81,3 +80,14 @@ body{
 	//background-repeat: no-repeat;
 }
 
+#google{	
+	position: absolute;
+	left: 65%;
+	top: 55%;
+	transform: translate(-50%,-50%);
+	//width: 10vw;
+	//height: 10vh;
+	//background-image: url("google.png");
+	//background-size: 10vw 10vh;
+	//background-repeat: no-repeat;
+}

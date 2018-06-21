@@ -1,8 +1,10 @@
 <html>
+
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="screen-orientation" content="portrait">
+		<meta name="mobile-web-app-capable" content="yes">
 		<title>南門木事</title>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -19,8 +21,8 @@
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<link rel="stylesheet" type="text/css" href="achievement.css">
 		<link rel="stylesheet" type="text/css" href="setting.css">
-    <link rel="stylesheet" type="text/css" href="friend.css">
-    <link rel="stylesheet" type="text/css" href="loginPage/loginstyle.css"> 
+   		<link rel="stylesheet" type="text/css" href="friend.css">
+    	<link rel="stylesheet" type="text/css" href="loginPage/loginstyle.css"> 
 	</head>
 	
 	<body>
@@ -41,7 +43,7 @@
 				<div id="log">
 					<b>L O G I N</b>
 				</div>
-				<img id="facebook" src="loginPage/dump.png" height="15%" onclick = "login()" >
+				<img id="facebook" src="facebook.png" height="15%" onclick = "login()" >
         <div id="status"></div>
         <div id="picture"></div>
 			</div>
@@ -135,77 +137,61 @@
 			</div>
 		</div>
 		<!--種樹頁面-->
-		<div id = "pbackground">			
-			<div id = "plant">
-				<img id = "money" src="ICON/dollar.png" height="6%">
-				<div id = "moneybar">
-					<p>10000</p>
+		<div id="pbackground">
+				<div id="plant">			
+					<b id="thisyear">1950</b>
+					<div id="timebar">
+						<img id="timeicon" src="ICON2/時間軸.png" height="8%">
+						<img id="timeline" src="ICON2/時間軸條.png">
+					</div>
+					<img id="click" src="ICON/click4.gif" height="10%">
+		
+					<img id="tool1" src="ICON2/吹風機按鈕.png" height="7%">
+					<img id="watercan" src="ICON2/澆水器.png" width="25%">
+					<img id="water" src="ICON2/水滴改.png" width="10%">
+					<img id="boom" src="ICON2/樹葉爆炸風.png">
+					<img id="wind1" src="ICON2/wind1.png" width="65%">
+					<img id="wind2" src="ICON2/wind2.png" width="65%">
+		
+					<img id="tool2" src="ICON2/澆水器按鈕.png" height="7%">
+		
+					<img id="bigtree" src="ICON2/tree2.png">
+					<div>
+						<img id="plantback" src="turtle/back.png">
+					</div>
+					<div id="window">
+						<img src="ICON/enter.png">
+						<p>從葉脈深處傳來記
+							<br>憶的脈動，是否探
+							<br>索？</p>
+						<button></button>
+						<button></button>
+					</div>
 				</div>
-				<img id = "timeicon" src="ICON/hourglass.png" height="6%">
-				<b id = "thisyear">1950</b>
-				<div id = "timebar">
-					<img id = "timeline" src = "ICON/狀態列內.png">
+		
+				<div id="shop">
+					<div class="price">200</div>
+					<div class="price">100</div>
+					<div class="price">50</div>
+					<div class="price">100</div>
+					<div class="price">100</div>
+					<div class="price">100</div>
+					<div class="price">100</div>
+					<div class="price">100</div>
+					<div class="price">100</div>
+		
+					<img class="good" src="ICON/syringe.png" width="22%">
+					<img class="good" src="ICON/syringe2.png" width="22%">
+					<img class="good" src="ICON/syringe3.png" width="22%">
+					<img class="good" src="ICON/seed.png" width="22%">
+					<img class="good" src="ICON/seed2.png" width="22%">
+					<img class="good" src="ICON/seed3.png" width="22%">
+					<img class="good" src="ICON/shovel.png" width="22%">
+					<img class="good" src="ICON/shovel2.png" width="22%">
+					<img class="good" src="ICON/shovel3.png" width="22%">
+					<img id="shelves" src="ICON/shelves.png">
 				</div>
-                <img id = "goback" src="ICON/error.png" height = "4%">
-				<img id = "storeicon" src="ICON/store (1).png" height = "10%">
-				<img id = "click" src = "ICON/click4.gif" height = "10%">
-
-				<img id = "tool1" src="ICON/drop.png" height = "10%">
-				<img id = "watercan" src = "ICON/watering-can (1).png" width = "25%">
-				
-				<img id = "tool2" src="ICON/worm.png" height = "10%">
-				<div id = "tool2b">
-					<img class = "tool2b" src="ICON/syringe.png" width = "22%">
-					<img class = "tool2b" src="ICON/syringe2.png" width = "22%">
-					<img class = "tool2b" src="ICON/syringe3.png" width = "22%">
-				</div>
-				
-                <img id = "tool3" src="ICON/ferterlizer.png" height = "10%">
-				<div id = "tool3b">
-					<img class = "tool3b" src="ICON/seed.png" width = "22%">
-					<img class = "tool3b" src="ICON/seed2.png" width = "22%">
-					<img class = "tool3b" src="ICON/seed3.png" width = "22%">
-				</div>
-				
-                <img id = "tool4" src="ICON/shovel0.png" height = "10%">
-				<div id = "tool4b">
-					<img class = "tool4b" src="ICON/shovel.png" width = "22%">
-					<img class = "tool4b" src="ICON/shovel2.png" width = "22%">
-					<img class = "tool4b" src="ICON/shovel3.png" width = "22%">
-				</div>
-
-				<img id = "bigtree" src="ICON/tree.png">
-				<div id = "window">
-					<img src="ICON/enter.png">
-					<p>從葉脈深處傳來記<br>憶的脈動，是否探<br>索？</p>
-					<button></button>
-					<button></button>
-				</div>              
 			</div>
-
-			<div id = "shop">									
-				<div class = "price">200</div>					
-				<div class = "price">100</div>
-				<div class = "price">50</div>
-				<div class = "price">100</div>
-				<div class = "price">100</div>
-				<div class = "price">100</div>
-				<div class = "price">100</div>
-				<div class = "price">100</div>
-				<div class = "price">100</div>
-
-				<img class = "good" src="ICON/syringe.png" width = "22%">
-				<img class = "good" src="ICON/syringe2.png" width = "22%">
-				<img class = "good" src="ICON/syringe3.png" width = "22%">
-				<img class = "good" src="ICON/seed.png" width = "22%">
-				<img class = "good" src="ICON/seed2.png" width = "22%">
-				<img class = "good" src="ICON/seed3.png" width = "22%">
-				<img class = "good" src="ICON/shovel.png" width = "22%">
-				<img class = "good" src="ICON/shovel2.png" width = "22%">
-				<img class = "good" src="ICON/shovel3.png" width = "22%">
-				<img id = "shelves" src="ICON/shelves.png">
-			</div>			
-		</div>
 		<!--種樹頁面-->
 
 		<!--烏龜頁面-->
