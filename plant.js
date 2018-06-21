@@ -77,12 +77,12 @@ $(document).ready(function () {
 	document.body.addEventListener('touchmove', function (event) {//避免問題
 		event.preventDefault();
 	}, false);
-
+  /*
 	$("#plantback").click(function () {
 		$("#main").css("top", "0");
 		$("#main").css("opacity", "1");
 		$("#pbackground").hide();
-	});
+	});*/
 
 	$("#tool1").on("vmousedown",function () {
 		use = false;
