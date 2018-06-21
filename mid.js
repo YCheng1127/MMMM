@@ -1,6 +1,5 @@
 var w_width = $(window).width();
 var w_height = $(window).height();
-var front = 0; // where enter shop // 0 for main ,1 for plant
 
 $(document).ready(function(){
 	
@@ -21,54 +20,14 @@ $(document).ready(function(){
 	gg_click();	
 	
 	// main page
-	sun_click();
-	setting_click();
-	tree_click();
-	cloud_click();
-	
-	// plant page
-	/*map_click();
-	store1_click();
-	back_click();
-	
-	slide(2);
-	slide(3);
-	slide(4);
-	hide(2);
-	hide(3);
-	hide(4);
-	
-	$("#tool1").click(function(e){
-		make(e,$("#watercan"));
-	});
-	
-	$("[class^=tool]").click(function(e){
-		make(e,$(this));
-	});
-	
-	$("#plant").click(function(e){
-		if(clicked){
-			obj.offset({top: e.pageY-40, left: e.pageX-40});
-			obj.show();
-			obj.css("transform");
-			if(obj.attr("src") == "wateringcan1.png")
-				obj.css("transform","rotate(-45deg)");
-			else if(obj.attr("class") == "tool2b" || obj.attr("class") == "tool4b")
-				obj.animate({"top": e.pageY+10+"px", "left": e.pageX-100+"px"},600);
-			else if(obj.attr("class") == "tool3b")
-				obj.effect("bounce");
-			else
-				obj;
-			setTimeout(function(){
-				clicked = false;
-				obj.remove();
-			},600);
-		}
-	});	*/
-	
+  main_building_click();
+  main_forest_click();
+  main_tree_click();
+  main_setting_click();
+
 	// acheievment page
-	sun_back_click();
-	achievement_click();
+	// sun_back_click();
+	// achievement_click();
 	
 	// setting page
 	set_back_click();
@@ -76,14 +35,10 @@ $(document).ready(function(){
 	about_click();
 	
 	// friend page
-	forest_click();
 	friend_back_click();
 	
-	// store page
-	store_click();
-	
 	// story page
-	gate_click();
+	story_back_click();
 	
 	// gaming page
 	
@@ -95,7 +50,7 @@ function set_position(){
 	$('#login').css({left:-w_width,opacity:0});
 	$('#main').css({left:-w_width,opacity:0});
 	//$('#plant').css({top:w_height,opacity:0});
-	$('#achievement').css({top:w_height,opacity:0});
+	//$('#achievement').css({top:w_height,opacity:0});
 	$('#set').css({top:w_height,opacity:0},);
 	$('#friend').css({left:-w_width,opacity:0});
 	$('#story').css({top:w_height,opacity:0});
@@ -111,6 +66,51 @@ function login(){
 	$('#login')
 		.animate({opacity:0},1000)
 		.animate({left:0,opacity:1},1000);
+}
+
+function main_building_click(){
+  var main_bd = document.getElementById('main_building');
+  main_bd.addEventListener('touchstart',function(event){
+    event.preventDefault();
+    $('#main').animate({top:-w_height,opacity:0},1000);
+    $('#story').animate({top:0,opacity:1},1000);
+  },false);
+}
+
+function main_forest_click(){
+  var main_fr = document.getElementById('main_forest');
+  main_fr.addEventListener('touchstart',function(event){
+    event.preventDefault();
+    $('#main').animate({left:w_width,opacity:0},1000);
+    $('#friend').animate({left:0,opacity:1},1000);
+  },false);
+}
+
+function main_tree_click(){
+  var main_tr = document.getElementById('main_tree');
+  main_tr.addEventListener('touchstart',function(event){    
+    event.preventDefault();
+    $('#main').animate({top:-w_height,opacity:0},1000);
+    $('#plant').animate({top:0,opacity:1},1000);
+  },false);
+}
+
+function main_setting_click(){
+  var main_st = document.getElementById('main_setting');
+  main_st.addEventListener('touchstart',function(event){
+    event.preventDefault();
+    $('#main').animate({top:-w_height,opacity:0},1000);
+    $('#set').animate({top:0,opacity:1},1000);
+  },false);
+}
+
+function story_back_click(){
+  var story_bk = document.getElementById('story_back');
+  story_bk.addEventListener('touchstart',function(event){
+    event.preventDefault();
+    $('#story').animate({top:w_height,opacity:0},1000);
+    $('#main').animate({top:0,opacity:1},1000);
+  },false);
 }
 
 function fb_click(){
@@ -131,105 +131,7 @@ function gg_click(){
 	},false);
 }
 
-function tree_click(){
-	var tr = document.getElementById('tree');
-	tr.addEventListener('touchstart',function(event){
-		event.preventDefault();
-		$('#main').animate({top:-w_height,opacity:0},1000);
-		//$('#plant').animate({top:0,opacity:1},1000);
-		$("#pbackground").show();
-		timer();
-	},false);
-}
-
-function map_click(){
-	var mp = document.getElementById('map');
-	mp.addEventListener('touchstart',function(event){
-		event.preventDefault();
-		$('#plant').animate({top:w_height,opacity:0},1000);
-		$('#main').animate({top:0,opacity:1},1000);
-	},false);
-}
-
-function store1_click(){
-	var st1 = document.getElementById('store1');
-	st1.addEventListener('touchstart',function(event){
-		front = 1;
-		event.preventDefault();
-		$("#map").hide("slow");
-		$("#item_back").css({opacity:1});
-		$("#item").css("box-shadow","5px 5px 10px 0.3px rgba(20%,20%,40%,0.3)");
-		$("#item").animate({width:w_width},1000);
-		$("#item_back").css({height:0.1*w_height});
-	},false);
-}
-
-function back_click(){
-	var bk = document.getElementById('item_back');
-	bk.addEventListener('touchstart',function(event){
-		event.preventDefault();
-		$("#item_back").css({height:0});
-		$("#item").animate({width:0},350);
-		if(front){
-			$("#map").show("slow");
-		}
-	},false);
-}
-
-var tool = [false,false,false,false,false];
-var working = false;
-var clicked = false;
-var obj = null;
-
-/*function slide(i){
-	$("#tool"+i).click(function(){
-		if(!tool[i]){   
-			$("#tool"+i+"b").animate({"width":"60vw"},350,function(){
-				tool[i] = true;
-			});
-		}
-	});
-}
-
-function hide(i){
-	$("*").click(function(){
-		if(tool[i] && !working){
-			working = true;
-			$("#tool"+i+"b").animate({width:0},350,function(){
-				tool[i] = false;
-				working = false;
-			});
-		}
-	});
-}
-
-function make(e,dom){
-	event.stopPropagation();
-	obj = dom.clone();
-	obj.css("position","absolute");
-	$("#plant").append(obj);
-	obj.hide();
-	clicked = true;
-}*/
-
-function sun_click(){
-	var su = document.getElementById('sun');
-	su.addEventListener('touchstart',function(event){
-		event.preventDefault();
-		$('#main').animate({top:-w_height,opacity:0},1000);
-		$('#achievement').animate({top:0,opacity:1},1000);
-	},false);
-}
-
-function sun_back_click(){
-	var sb = document.getElementById('sun_back');
-	sb.addEventListener('touchstart',function(event){
-		event.preventDefault();
-		$('#main').animate({top:0,opacity:1},1000);
-		$('#achievement').animate({top:w_height,opacity:0},1000);
-	},false);
-}
-
+/*
 function achievement_click(){
 	var am  = document.getElementById('achievement');
 	var ac1 = document.getElementById('ac1');
@@ -277,24 +179,7 @@ function achievement_click(){
 				document.getElementById('content').innerHTML = "<b>earning money</b><br>(87/100)";		
 		}
 	},false);
-}
-
-function setting_click(){
-	var ss = document.getElementById('settings');
-	var cd = document.getElementById('clouds');
-	
-	ss.addEventListener('touchstart',function(){
-		event.preventDefault();
-		$('#main').animate({top:-w_height,opacity:0},1000);
-		$('#set').animate({top:0,opacity:1},1000);
-	},false);
-	
-	cd.addEventListener('touchstart',function(){
-		event.preventDefault();
-		$('#main').animate({top:-w_height,opacity:0},1000);
-		$('#set').animate({top:0,opacity:1},1000);
-	},false);
-}
+}*/
 
 function set_back_click(){
 	var stb = document.getElementById('set_back');
@@ -336,30 +221,6 @@ function about_click(){
 	},false);
 }
 
-function cloud_click(){
-	var cld = document.getElementById('cloud');
-	cld.addEventListener('touchstart',function(event){
-		event.preventDefault();
-		$('#cloud').effect('shake');
-		if($('#dollar1').css('display')!='none'){
-			$('#dollar1').animate({top:0.23*w_height},900).fadeOut('slow');
-			$('#dollar2').animate({top:0.25*w_height},1000).fadeOut('slow');
-			$('#dollar3').animate({top:0.24*w_height},1200).fadeOut('slow');
-			$('#dollar4').animate({top:0.22*w_height},1100).fadeOut('slow');
-			$('#dollar5').animate({top:0.26*w_height},1300).fadeOut('slow');
-		}
-	},false);
-}
-
-function forest_click(){
-	var fr = document.getElementById('forest');
-	fr.addEventListener('touchstart',function(event){
-		event.preventDefault();
-		$('#main').animate({left:w_width,opacity:0},1000);
-		$('#friend').animate({left:0,opacity:1},1000);
-	},false);
-}
-
 function friend_back_click(){
 	var frb = document.getElementById('friend_back');
 	frb.addEventListener('touchstart',function(event){
@@ -369,23 +230,3 @@ function friend_back_click(){
 	},false);
 }
 
-function store_click(){
-	var st = document.getElementById('store');
-	st.addEventListener('touchstart',function(event){
-		front = 0;
-		event.preventDefault();
-		$("#item_back").css({opacity:1});
-		$("#item").css("box-shadow","5px 5px 10px 0.3px rgba(20%,20%,40%,0.3)");
-		$("#item").animate({width:w_width},1000);
-		$("#item_back").css({height:0.1*w_height});
-	},false);
-}
-
-function gate_click(){
-	var gt = document.getElementById('gate');
-	gt.addEventListener('touchstart',function(event){
-		event.preventDefault();
-		$('#main').animate({top:-w_height,opacity:0},1000);
-		$('#story').animate({top:0,opacity:1},1000);
-	},false);	
-}
