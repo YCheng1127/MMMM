@@ -25,6 +25,9 @@ $(document).ready(function(){
   main_tree_click();
   main_setting_click();
 
+  // plant page
+  plant_back_click();
+
 	// acheievment page
 	// sun_back_click();
 	// achievement_click();
@@ -91,7 +94,7 @@ function main_tree_click(){
   main_tr.addEventListener('touchstart',function(event){    
     event.preventDefault();
     $('#main').animate({top:-w_height,opacity:0},1000);
-    $('#pbackground').fadeIn("slow").animate({top:0,opacity:1},1000);
+    $('#pbackground').animate({top:0,opacity:1},1000);
   },false);
 }
 
@@ -101,6 +104,15 @@ function main_setting_click(){
     event.preventDefault();
     $('#main').animate({top:-w_height,opacity:0},1000);
     $('#set').animate({top:0,opacity:1},1000);
+  },false);
+}
+
+function plant_back_click(){
+  var plant_bk = document.getElementById('plantback');
+  plant_bk.addEventListener('touchstart',function(event){
+    event.preventDefault();
+    $('#pbackground').animate({top:w_height,opacity:0},1000);
+    $('#main').animate({top:0,opacity:1},1000);
   },false);
 }
 
