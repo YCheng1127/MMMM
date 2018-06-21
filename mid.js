@@ -49,11 +49,11 @@ $(document).ready(function(){
 function set_position(){
 	$('#login').css({left:-w_width,opacity:0});
 	$('#main').css({left:-w_width,opacity:0});
-	//$('#plant').css({top:w_height,opacity:0});
+	$('#pbackground').css({top:w_height,opacity:0});
 	//$('#achievement').css({top:w_height,opacity:0});
 	$('#set').css({top:w_height,opacity:0},);
 	$('#friend').css({left:-w_width,opacity:0});
-	$('#pbackground').css({top:w_height,opacity:0});
+	$('#story').css({top:w_height,opacity:0});
 }
 
 function loading(){
@@ -91,7 +91,7 @@ function main_tree_click(){
   main_tr.addEventListener('touchstart',function(event){    
     event.preventDefault();
     $('#main').animate({top:-w_height,opacity:0},1000);
-    $('#pbackground').show().animate({top:0,opacity:1},1000);
+    $('#pbackground').fadeIn("slow").animate({top:0,opacity:1},1000);
   },false);
 }
 
