@@ -4,7 +4,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-image: url("mountain.png");
+	background-image: url("./png/mountain.png");
 	background-repeat: no-repeat;
 	background-size: 100vw 100vh;
 }
