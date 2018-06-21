@@ -80,7 +80,7 @@
           /*console.log(response.summary);*/
           document.getElementById('picture').innerHTML=`<img id="face" src='http://graph.facebook.com/${response.id}/picture?type=large'  />`
           /*console.log(JSON.stringify(response));*/
-          console.log(response.friends.data[0].name) ;     
+          /*console.log(response.friends.data[0].name) ;*/     
           console.log(response.friends.data.length);
             //ajax for FB login 傳送名字到後端
             $.ajax({
@@ -104,8 +104,16 @@
         /*FB.api('/me/taggable_friends', function(response){
           console.log("Hello"+ response);
         
-        })*/  
+        })*/
+        
+        
+        $('#log').animate({opacity:0},1000);
+        $('#facebook').animate({opacity:0},1000);
 
+        setTimeout(function(){
+          $('#login').animate({left:w_width,opacity:0},1000);
+          $('#main').animate({left:0,opacity:1},1000);          
+        },2500);
       }
 
       var logout = function(){
@@ -136,7 +144,11 @@
           }
         },{scope: 'public_profile,email,user_friends'})
      }
-
+    var guest = function(){
+      
+          $('#login').animate({left:w_width,opacity:0},1000);
+          $('#main').animate({left:0,opacity:1},1000);          
+    }
    /*     
   //login by enter name
    var loginenter = function(){

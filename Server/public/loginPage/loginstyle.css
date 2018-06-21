@@ -56,8 +56,8 @@
   border-radius:100%;
   border: 1px solid;
   position:absolute;
-  top:30%;
-  right:10%;
+  top:12%;
+  right:12%;
   width:30%;
 }
 /* not suitable for picture
@@ -83,12 +83,18 @@
 }
 
 #status{
-  font-size:15px;
+  font-size:15%;
   position:absolute;
-  top:10%;
+  top:5%;
   left:7%;
   font-family:Verdana;
-  color:darkcyan;
+  color:black;
   font-weight:bold;
 }
 
+#festival{
+  position:absolute;
+  top:40%;
+  left: 40%%;
+  width:100%%;
+}

@@ -16,9 +16,9 @@ $(document).ready(function(){
 	loading();
 	
 	// login page
-	login();
-	fb_click();
-	gg_click();	
+	loginT();
+	/*fb_click();*/
+	/*gg_click();*/	
 	
 	// main page
 	sun_click();
@@ -107,12 +107,12 @@ function loading(){
 		.animate({left:w_width,opacity:0},1000);
 }
 
-function login(){
+function loginT(){
 	$('#login')
 		.animate({opacity:0},1000)
 		.animate({left:0,opacity:1},1000);
 }
-
+/*
 function fb_click(){
 	var fb = document.getElementById('facebook');
 	fb.addEventListener('touchstart',function(event){
@@ -120,8 +120,8 @@ function fb_click(){
 		$('#login').animate({left:w_width,opacity:0},1000);
 		$('#main').animate({left:0,opacity:1},1000);
 	},false);
-}
-
+}*/
+/*
 function gg_click(){
 	var gg = document.getElementById('google');
 	gg.addEventListener('touchstart',function(event){
@@ -129,7 +129,7 @@ function gg_click(){
 		$('#login').animate({left:w_width,opacity:0},1000);
 		$('#main').animate({left:0,opacity:1},1000);
 	},false);
-}
+}*/
 
 function tree_click(){
 	var tr = document.getElementById('tree');

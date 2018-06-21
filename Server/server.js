@@ -147,8 +147,10 @@ app.post('/FBcatchuser',urlencodedParser,function(req,res){
   },1000); 
   //獲取朋友資料
   setTimeout(function(){
-            db.con(function(connect){
+              if(friends!=undefined){
+              db.con(function(connect){
               var sql="SELECT * FROM user WHERE ";
+
               for(i=0;i<friends.length;i++){
                 if(i!=friends.length-1 )
                   sql = sql + "id = '" + friends[i].id + "' or ";
@@ -163,7 +165,7 @@ app.post('/FBcatchuser',urlencodedParser,function(req,res){
                 res.send(userdata+JSON.stringify(result));
               })   
             })
-
+            }
   },1500);
   
 })
