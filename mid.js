@@ -15,9 +15,9 @@ $(document).ready(function(){
 	loading();
 	
 	// login page
-	login();
-	fb_click();
-	gg_click();	
+	loginT();
+	/*fb_click();
+	gg_click();	*/
 	
 	// main page
   main_building_click();
@@ -65,7 +65,7 @@ function loading(){
 		.animate({left:w_width,opacity:0},1000);
 }
 
-function login(){
+function loginT(){
 	$('#login')
 		.animate({opacity:0},1000)
 		.animate({left:0,opacity:1},1000);
@@ -125,7 +125,7 @@ function story_back_click(){
   },false);
 }
 
-function fb_click(){
+/*function fb_click(){
 	var fb = document.getElementById('facebook');
 	fb.addEventListener('touchstart',function(event){
 		event.preventDefault();
@@ -141,7 +141,7 @@ function gg_click(){
 		$('#login').animate({left:w_width,opacity:0},1000);
 		$('#main').animate({left:0,opacity:1},1000);
 	},false);
-}
+}*/
 
 /*
 function achievement_click(){

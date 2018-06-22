@@ -23,7 +23,7 @@ body{
 	position: absolute;
 	left: 0;
 	top: 0;
-	z-index: 3;
+	z-index: 4;
 	background-color: #ffffcc;
 }
 
@@ -44,7 +44,8 @@ body{
 }
 
 #login{
-  width: 100vw;
+	//display: none;
+	width: 100vw;
 	height: 100vh;
 	position: absolute;
 	left: 0;
@@ -64,14 +65,24 @@ body{
 
 #facebook{
 	position: absolute;
-	left: 35%;
+	left: 50%;/*35%*/
 	top: 55%;
 	transform: translate(-50%,-50%);
+	//width: 10vw;
+	//height: 10vh;
+	//background-image: url("facebook.png");
+	//background-size: 10vw 10vh;
+	//background-repeat: no-repeat;
 }
 
-#google{	
+/*#google{	
 	position: absolute;
 	left: 65%;
 	top: 55%;
 	transform: translate(-50%,-50%);
+	//width: 10vw;
+	//height: 10vh;
+	//background-image: url("google.png");
+	//background-size: 10vw 10vh;
+	//background-repeat: no-repeat;*/
 }

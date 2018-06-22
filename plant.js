@@ -36,7 +36,20 @@ function make(dom) {
 
 function timer() {
 	var time = 0;
+	$.ajax({
+		method: "post",
+		url: "./year2",
+		success: function (data) {
+			time = data;//得到使用者資料，或是得到建立好的資料
+			if (time != 0) {
+				$("#thisyear").text(1950 + time / 3);
+				$("#timeline").animate({ "width": 1 + time / 3 * 2 + "%" }, 300);
+			}
+		}
+	})
+	
 	var num = 0;
+	
 	$("#bigtree").click(function () {
 		if (use)
 		{
@@ -44,7 +57,14 @@ function timer() {
 			//make($("#watercan"));		
 			if (!(time % 3)) {
 				$("#thisyear").text(1950 + time / 3);
-				$("#timeline").animate({"width": 1 + time / 3 * 2 + "%"},300);		
+				$("#timeline").animate({"width": 1 + time / 3 * 2 + "%"},300);
+				$.ajax({
+					method: "post",
+					url: "./year",
+					data: {
+						year: time,
+					},
+				})				
 				dropping(num);
 				num++;
 			}
@@ -72,13 +92,14 @@ function dropping(num){
 
 
 $(document).ready(function () {
+	timer();
 	leaf.css({ "left": "10vw", "position": "relative" });
 
 	document.body.addEventListener('touchmove', function (event) {//避免問題
 		event.preventDefault();
 	}, false);
-  /*
-	$("#plantback").click(function () {
+
+	/*$("#plantback").click(function () {
 		$("#main").css("top", "0");
 		$("#main").css("opacity", "1");
 		$("#pbackground").hide();
@@ -185,6 +206,9 @@ $(document).ready(function () {
 	$("#window > button:nth-of-type(2)").click(function () {
 		$("#window").css("display", "none");
 	});
+
+	var seq = [2,3,2,1];
+	var index = 0;
 	setInterval(()=>{
 		if (Math.random() < 0.33){
 			var i = Math.ceil(Math.random() * 2);
@@ -199,7 +223,5 @@ $(document).ready(function () {
 			}, 100)
 		}
 	},2000)
-	var seq = [2,3,2,1];
-	var index = 0;
-	
+		
 });
