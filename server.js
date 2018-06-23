@@ -80,28 +80,34 @@ app.post("/FBcatchuser", function (req, res) {
         else
           sql = sql + "id = '" + friends[i].id + "'";
       }
-      c.query(sql, function (err, d) {
+      c.query(sql, function (error, d) {
+        if (error) {
+          throw error;
+        }
         res.send(userdata + JSON.stringify(d));
       })
   }
   c.query('select year from user WHERE id = ' + id, function (error, d, fields) {
+    if (error) {
+      throw error;
+    }
     console.log(d[0].year)
     year = d[0].year; 
   })
 })
 
 app.post("/year", function (req, res) {
-  c.query("UPDATE`user` SET`year` = '" + req.body.year + "' WHERE`user`.`id` = '" + id + "'")
+  c.query("UPDATE`user` SET`year` = '" + req.body.year + "' WHERE`user`.`id` = '" + id + "'", function (error, d, fields) {
+    if (error) {
+      throw error;
+    }
+  })
 })
 
 app.post("/year2", function (req, res) {
   res.send(""+year)
 })
 
-app.post("/ajax_data2", function(req,res){
-  fname = req.body.fname
-  res.send(`Hello, ${req.body.fname} ${req.body.lname}`)
-})
 
 
 
