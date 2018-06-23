@@ -1,10 +1,4 @@
-$("#window > button:nth-of-type(1)").click(function () {
-    if(id == 4)
-    {
-    $("#mbody").show();
-    $("#window").css("display", "none");
-    }
-});
+
 
 $("#btn").click(function () {
     $("#mbody").hide();
