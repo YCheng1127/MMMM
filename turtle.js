@@ -1,6 +1,6 @@
 var begin = 0;
 $("#window > button:nth-of-type(1)").click(function () {
-  if (id == 0) {
+  if (id == 14) {
     $("#all").show();
     $("#window").css("display", "none");
     document.getElementById("rules").style.display = "block";
