@@ -61,7 +61,7 @@ function timer() {
 					year: time,
 				},
 			})
-			if((time > 1 &&num==0) || (time > 12 &&num==1) || (time > 35 &&num==2) || (time > 51 &&num==3) || (time > 64 &&num==4) || (time > 111 &&num==5) || (time > 124 &&num==6) || (time > 183 &&num==7) || (time > 187 &&num==8) || (time > 203 &&num==9) || (time > 204 &&num==10) || (time > 206 &&num==11) || (time > 208 &&num==12) || (time > 211 &&num==13) || (time > 239 &&num==14) || (time > 241 &&num==15) || (time > 253 &&num==16)){
+			if((time >= 1 &&num==0) || (time >= 12 &&num==1) || (time >= 35 &&num==2) || (time >= 51 &&num==3) || (time >= 64 &&num==4) || (time >= 111 &&num==5) || (time >= 124 &&num==6) || (time >= 183 &&num==7) || (time >= 187 &&num==8) || (time >= 203 &&num==9) || (time >= 204 &&num==10) || (time >= 206 &&num==11) || (time >= 208 &&num==12) || (time >= 211 &&num==13) || (time >= 239 &&num==14) || (time >= 241 &&num==15) || (time >= 253 &&num==16)){
 				dropping(num);
 				num++;
 				console.log(num)
