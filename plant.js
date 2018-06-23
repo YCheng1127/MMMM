@@ -119,7 +119,7 @@ $(document).ready(function () {
 			$(this).fadeOut(500, function () { $("#boom").css({ "height": "0", "width": "0", "top": "100vw" })});			
 		})		
 		setTimeout(function () {
-			$(".leaf").each(function(){
+			$("[src^='ICON2/yeaf']").each(function(){
 				clearInterval(dropid[$(this).attr("id")[4]]);
 				if (parseInt($(this).css("left")) / document.documentElement.clientWidth * 100 > 50){
 					$(this).animate({ "top": "-10vh", "left": 50 + Math.random() * 1000 + "vw" }, 1000,()=>{$(this).remove()});
@@ -143,7 +143,7 @@ $(document).ready(function () {
 		},100)
 	})
 
-	$("#plant").click(function (e) {
+	$("#bigtree").on("click",function (e) {
 		if (use) {
 			clearTimeout(waterid);
 			if (tool== 2)
@@ -166,8 +166,7 @@ $(document).ready(function () {
 			}, 700);
 		}		
 	});
-	$("#plant").on("vmousemove", ".leaf", function (e) {
-		
+	$("#plant").on("vmousemove", ".leaf", function (e) {		
 		$(this).offset({
 			top: e.pageY - 40,
 			left: e.pageX - 40
@@ -192,11 +191,10 @@ $(document).ready(function () {
 	});
 	$("#plant").on("click", ".leaf", function () {
 		id = $(this).attr("id")[4];
+		if ($("#leaf" + id).attr("src")[6] != "y")
+			$("#window").css("display", "flex");
 		//if (id == 0) {
-		$("#window").css("display", "flex");
-		//}
-		//黃葉
-		//$("#leaf" + id).
+			
 	});
 	/*$("#window > button:nth-of-type(1)").click(function () {
 	  $("#all").show();
@@ -205,9 +203,12 @@ $(document).ready(function () {
 	});*/
 	$("#window > button:nth-of-type(2)").click(function () {
 		$("#window").css("display", "none");
+		var s = $("#leaf" + id).attr("src");//黃葉
+		s = s.replace(/l/,"y");
+		$("#leaf" + id).attr("src", s);
 	});
 
-	var seq = [2,3,2,1];
+	var seq = [5,6,7,8,9,8,7,6,5,4,3,2,1,2,3,4];
 	var index = 0;
 	setInterval(()=>{
 		if (Math.random() < 0.33){
@@ -217,10 +218,10 @@ $(document).ready(function () {
 			var shake = setInterval(() => {
 				$("#bigtree").attr("src", "ICON2/tree" + seq[index] + ".png");
 				index++;
-				if (index > 3)
+				if (index > 15)
 					index = 0;
 				setTimeout(() => { clearInterval(shake) }, 3000);
-			}, 100)
+			}, 80)
 		}
 	},2000)
 		
