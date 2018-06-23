@@ -1,5 +1,5 @@
 $("#window > button:nth-of-type(1)").click(function () {
-    if(id == 1)
+    if(id == 4)
     {
     $("#mbody").show();
     $("#window").css("display", "none");
