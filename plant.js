@@ -37,38 +37,49 @@ function make(dom) {
 
 function timer() {
 	var time = 0;
+	var num = 0;
 	$.ajax({
 		method: "post",
 		url: "./year2",
 		success: function (data) {
-			time = data;//得到使用者資料，或是得到建立好的資料
+			time = data[0];
+			num = data[1];
 			if (time != 0) {
 				$("#thisyear").text(1724 + time);
 				$("#timeline").animate({ "width": time * 0.17 + "%" }, 300);
 			}
 		}
 	})
-	var num = 0;
+	
 	setTimeout(function(){
 		var progress = setInterval(function(){
 			time++;
 			$("#thisyear").text(1724 + time);
 			$("#timeline").animate({"width": time * 0.17 + "%"},300);
-			$.ajax({
-				method: "post",
-				url: "./year",
-				data: {
-					year: time,
-				},
-			})
-			if((time >= 1 &&num==0) || (time >= 12 &&num==1) || (time >= 35 &&num==2) || (time >= 51 &&num==3) || (time >= 64 &&num==4) || (time >= 111 &&num==5) || (time >= 124 &&num==6) || (time >= 183 &&num==7) || (time >= 187 &&num==8) || (time >= 203 &&num==9) || (time >= 204 &&num==10) || (time >= 206 &&num==11) || (time >= 208 &&num==12) || (time >= 211 &&num==13) || (time >= 239 &&num==14) || (time >= 241 &&num==15) || (time >= 253 &&num==16)){
+
+			if((time >= 1 &&num<1) || (time >= 12 &&num<2) || (time >= 35 &&num<3) || (time >= 51 &&num<4) || (time >= 64 &&num<5) || (time >= 111 &&num<6) || (time >= 124 &&num<7) || (time >= 183 &&num<8) || (time >= 187 &&num<9) || (time >= 203 &&num<10) || (time >= 204 &&num<11) || (time >= 206 &&num<12) || (time >= 208 &&num<13) || (time >= 211 &&num<14) || (time >= 239 &&num<15) || (time >= 241 &&num<16) || (time >= 253 &&num<17)){
 				dropping(num);
 				num++;
+				$.ajax({
+					method: "post",
+					url: "./num",
+					data: {
+						num: num,
+					},
+				})
 				console.log(num)
 			}
 		} ,3000)
 	},5000)	
-	
+	setTimeout(function(){
+	$.ajax({
+		method: "post",
+		url: "./year",
+		data: {
+			year: time,
+		},
+	})
+	},10000)
 	$("#bigtree").click(function () {
 		if (use)
 			time++;				

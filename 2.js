@@ -6,29 +6,30 @@ $("#btn").click(function () {
     var count = 0;
     function appear() {
         count += 1;
-        var num = Math.floor(Math.random() * 9);
-        console.log(num);
-        $('#D' + num).css('display', 'block');
-        $('#D' + num).on('click', function () {
-            $('#M' + num).css('background-image', 'url(img/must.png)');
-            setTimeout(function () { $('#D' + num).css('display', 'none') }, 500)
+        var numm = Math.floor(Math.random() * 9);
+        console.log(numm);
+        $('#D' + numm).css('display', 'block');
+        $('#D' + numm).on('click', function () {
+            $('#M' + numm).css('background-image', 'url(img/must.png)');
+            setTimeout(function () { $('#D' + numm).css('display', 'none') }, 500)
         })
-        $('#M' + num).css('background-image', 'url(img/newhole.png)');
+        $('#M' + numm).css('background-image', 'url(img/newhole.png)');
         if (count < 31) {
             setTimeout(function () { appear() }, 1500)
         }
     }
     appear();
-});
-
-
-var timeup = 45;
+    var timeup = 45;
 var timeup2 = setInterval(function () {
     timeup--;
     $("#timeup").text(timeup);
     if (timeup ==0)
         clearInterval(timeup2);
 }, 1000);
+});
+
+
+
 
 
 $("mbody2").click(function () {

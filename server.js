@@ -37,7 +37,8 @@ var c = mysql.createConnection({
 var name = "";
 var id = 0;
 var friends;
-var year = 0;   
+var year = 0;
+var num = 0;   
 var newornot = 1;
 var userdata = { kkk: 123 };
 var i = 0;
@@ -87,12 +88,13 @@ app.post("/FBcatchuser", function (req, res) {
         res.send(userdata + JSON.stringify(d));
       })
   }
-  c.query('select year from user WHERE id = ' + id, function (error, d, fields) {
+  c.query('select year,num from user WHERE id = ' + id, function (error, d, fields) {
     if (error) {
       throw error;
     }
-    console.log(d[0].year)
+    console.log(d[0].year+","+d[0].num)
     year = d[0].year; 
+    num = d[0].num;
   })
 })
 
@@ -104,8 +106,17 @@ app.post("/year", function (req, res) {
   })
 })
 
+app.post("/num", function (req, res) {
+  c.query("UPDATE`user` SET`num` = '" + req.body.num + "' WHERE`user`.`id` = '" + id + "'", function (error, d, fields) {
+    if (error) {
+      throw error;
+    }
+  })
+})
+
 app.post("/year2", function (req, res) {
-  res.send(""+year)
+  var array=[year,num]
+  res.send(array)
 })
 
 
