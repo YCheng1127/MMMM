@@ -188,6 +188,7 @@ body{
     width: 37vw;
     font-size: 18px;
     top: 35vh;
+    white-space: pre-line;
 }
 
 #window > button:nth-of-type(1){
