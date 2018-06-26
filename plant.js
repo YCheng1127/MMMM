@@ -10,6 +10,7 @@ var dropid = [0,0,0,0,0,0,0,0,0,0,0];
 var water = $("#water");
 var waterid = null;
 var txt= "\n\n從葉脈深處傳來記憶的脈動，是否探索？";
+var s = new WebSocket("wss://luffy.ee.ncku.edu.tw:10129/");
 
 function getdegree(obj) {
 	var matrix = obj.css("-webkit-transform") ||
@@ -26,19 +27,10 @@ function getdegree(obj) {
 	return angle;
 }
 
-function make(dom) {
-	obj = dom.clone();
-	obj.css("position", "absolute");
-	$("#plant").append(obj);
-	obj.hide();
-	$("#click").show();
-	use = true;
-}
-
 function timer() {
 	var time = 0;
 	var num = 0;
-	$.ajax({
+	/*$.ajax({
 		method: "post",
 		url: "./year2",
 		success: function (data) {
@@ -49,29 +41,47 @@ function timer() {
 				$("#timeline").animate({ "width": time * 0.17 + "%" }, 300);
 			}
 		}
-	})
+	})*/
+	setTimeout(function(){s.send("all",0)},5000)
+	s.onmessage = function (e){
+		console.log(e.data)
+		if (e.data.substr(1,1) == "a"){
+			time = e.data.substr(2);
+			num = e.data.substr(0,1)
+		}
+		else{
+			time = e.data.substr(3);
+			num = e.data.substr(0, 2)
+		}
+		console.log(time)
+		if (time != 0) {			
+			$("#thisyear").text(1724 + parseInt(time));
+			$("#timeline").animate({ "width": time * 0.17 + "%" }, 300);
+		}
+	}
 	
 	setTimeout(function(){
 		var progress = setInterval(function(){
 			time++;
 			$("#thisyear").text(1724 + time);
 			$("#timeline").animate({"width": time * 0.17 + "%"},300);
-
+			s.send("y"+time);
 			if((time >= 1 &&num<1) || (time >= 12 &&num<2) || (time >= 35 &&num<3) || (time >= 51 &&num<4) || (time >= 64 &&num<5) || (time >= 111 &&num<6) || (time >= 124 &&num<7) || (time >= 183 &&num<8) || (time >= 187 &&num<9) || (time >= 203 &&num<10) || (time >= 204 &&num<11) || (time >= 206 &&num<12) || (time >= 208 &&num<13) || (time >= 211 &&num<14) || (time >= 239 &&num<15) || (time >= 241 &&num<16) || (time >= 253 &&num<17)){
 				dropping(num);
 				num++;
-				$.ajax({
+				/*$.ajax({
 					method: "post",
 					url: "./num",
 					data: {
 						num: num,
 					},
-				})
+				})*/
+				s.send("n"+num);
 				console.log(num)
 			}
 		} ,3000)
 	},5000)	
-	setTimeout(function(){
+	/*setTimeout(function(){
 	$.ajax({
 		method: "post",
 		url: "./year",
@@ -79,7 +89,7 @@ function timer() {
 			year: time,
 		},
 	})
-	},10000)
+	},10000)*/
 	$("#bigtree").click(function () {
 		if (use)
 			time++;				
@@ -106,6 +116,7 @@ function dropping(num){
 
 
 $(document).ready(function () {
+	
 	timer();
 	leaf.css({ "left": "10vw", "position": "relative" });
 

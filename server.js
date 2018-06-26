@@ -1,10 +1,13 @@
 const express = require('express')
 const app = express()
-const port = 10130
+const port = 10129
 const bodyParser = require('body-parser')//post
 const https = require('https')
 const fs = require('fs')
 const mysql = require('mysql')
+//
+var WebSocketServer = require('ws').Server;
+//
 
 //read json file
 /*var fs = require("fs");
@@ -24,8 +27,10 @@ const options = {
   ca: fs.readFileSync('/home/uidd2018/ssl/ca_bundle.crt')
 };
 
-https.createServer(options, app).listen(port)
-
+var server = https.createServer(options, app).listen(port)
+//
+var w = new WebSocketServer({server});
+//
 var c = mysql.createConnection({
   host: 'localhost',
   user: 'uidd2018_groupM',
@@ -119,6 +124,27 @@ app.post("/year2", function (req, res) {
   res.send(array)
 })
 
+w.on('connection', function (ws){
+  ws.on('message', function (data) {
+    if (data.substr(0,1) == "a"){
+      ws.send(num+"a"+year);
+    }
+    else if (data.substr(0, 1) == "y"){
+      c.query("UPDATE`user` SET`year` = '" + data.substr(1) + "' WHERE`user`.`id` = '" + id + "'", function (error, d, fields) {
+        if (error) {
+          throw error;
+        }
+      })
+    }
+    else if (data.substr(0, 1) == "n"){
+      c.query("UPDATE`user` SET`num` = '" + data.substr(1) + "' WHERE`user`.`id` = '" + id + "'", function (error, d, fields) {
+        if (error) {
+          throw error;
+        }
+      })
+    }
+  });
+});
 
 
 
