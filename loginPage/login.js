@@ -65,9 +65,23 @@
         })*/
 
       }
-
-    
-
+      //getfrienddata
+      function getfrienddata(fid,frienddata){
+        $.ajax({
+          method: "post",
+          url: "../getfrienddata",
+          data:{
+              id: fid
+          
+          },
+          success:function(data){
+            frienddata(data);
+          }
+        })
+      }
+      
+      
+      var myfriends;
       // Here we run a very simple test of the Graph API after login is
       // successful.  See statusChangeCallback() for when this call is made.
       function testAPI() {
@@ -82,6 +96,7 @@
           /*console.log(JSON.stringify(response));*/
           /*console.log(response.friends.data[0].name) ;*/     
           console.log(response.friends.data.length);
+          myfriends = response.friends.data;
             //ajax for FB login 傳送名字到後端
             $.ajax({
                 method: "post",
