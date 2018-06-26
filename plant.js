@@ -215,7 +215,7 @@ $(document).ready(function () {
 		}
 	});
 	$("#plant").on("click", ".leaf", function () {
-		id = $(this).attr("id")[4];
+		id = $(this).attr("id").substr(4);
 		if (id == 0) {
 			$("#text").text("築城!!\n");
 		}
@@ -267,7 +267,6 @@ $(document).ready(function () {
 		else if(id == 16){
 			$("#text").text("重建城門II\n");
 		}
-
 		if ($("#leaf" + id).attr("src")[6] != "y")
 			$("#window").css("display", "flex");			
 	});
