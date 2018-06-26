@@ -17,16 +17,16 @@ $(document).ready(function(){
 	// login page
 	loginT();
 	/*fb_click();
-	gg_click();	*/
+	gg_click();*/
 	
 	// main page
-  main_building_click();
-  main_forest_click();
-  main_tree_click();
-  main_setting_click();
+  	main_building_click();
+  	main_forest_click();
+	main_tree_click();
+  	main_setting_click();
 
-  // plant page
-  plant_back_click();
+  	// plant page
+ 	plant_back_click();
 
 	// acheievment page
 	// sun_back_click();
@@ -36,6 +36,7 @@ $(document).ready(function(){
 	set_back_click();
 	toggle_switch();
 	about_click();
+	about_back_click();
 	
 	// friend page
 	friend_back_click();
@@ -217,19 +218,22 @@ function toggle_switch(){
 	});
 }
 
+
 function about_click(){
-	var at = document.getElementById('about');
+	var at = document.getElementById('set_about');
 	at.addEventListener('touchstart',function(event){
 		event.preventDefault();		
-		var opt = document.getElementById('container').style.opacity;
-		if(opt==1)
-			$('#container').animate({opacity:0},1000,function(){
-				$(this).css('z-index',-1);
-				});
-		else{
-			$('#container').css('z-index',0);
-			$('#container').animate({opacity:1},1000);
-		}
+		$('#set_about_content').fadeIn("slow");
+		$('#set_about_back').fadeIn("slow");
+	},false);
+}
+
+function about_back_click(){
+	var at_bk = document.getElementById('set_about_back');
+	at_bk.addEventListener('touchstart',function(event){
+		event.preventDefault();
+		$('#set_about_content').fadeOut("slow");
+		$('#set_about_back').fadeOut("slow");
 	},false);
 }
 
