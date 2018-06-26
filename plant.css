@@ -3,7 +3,7 @@ body{
 }
 
 #pbackground{
-    //display:none;
+    /*display:none;*/
     position: absolute;
     top: 0;
     left: 0;
@@ -176,18 +176,19 @@ body{
 
 #window > img{    
     height: 45vh;
-    width: 60vw;
-    text-align:center;
-    color:white;
+    width: 60vw;   
     border-radius:10% 10% 10% 10%;
 	box-shadow:5px 5px 20px 0.3px rgba(20%,20%,40%,0.3);
 }
 
-#window > p{
+#text{
     position: absolute;
+    margin: auto auto auto auto;
+    height: 35vh;
+    width: 37vw;
     font-size: 18px;
-    color: white;
     top: 35vh;
+    white-space: pre-line;
 }
 
 #window > button:nth-of-type(1){
@@ -197,7 +198,6 @@ body{
     height: 5vh;
     width: 12vw;
     background-image: url("ICON/yes.png");
-    background-color: green;
     background-size: 100% 100%;
 }
 
@@ -208,7 +208,6 @@ body{
     height: 5vh;
     width: 12vw;
     background-image: url("ICON/no.png");
-    background-color: green;
     background-size: 100% 100%;
 }
 
