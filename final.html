@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="setting.css">
     <link rel="stylesheet" type="text/css" href="friend.css">
     <link rel="stylesheet" type="text/css" href="timeline.css">
+    <link rel="stylesheet" type="text/css" href="loginPage/loginstyle.css">
   </head>
 
   <body>
@@ -38,8 +39,10 @@
 
       <div id="login">
         <div id="log"><b>L O G I N</b></div>
-        <img id="facebook" src="./png/facebook.png" height="15%">
-        <img id="google" src="./png/google.png" height="15%">
+        <img id="facebook" src="./png/facebook.png" height="15%" onclick = "login()">
+        <!--img id="google" src="./png/google.png" height="15%"-->
+        <div id="status"></div>
+        <div id="picture"></div>
       </div>
 
       <div id="main">
@@ -49,190 +52,56 @@
         <img id="main_setting" src="./png/main_setting.png">
       </div>
 
-      <!--
-      <div id="achievement">
-        <img id="sun_back" class="back" src="back.png" height="10%">
-        <div id="a1">
-          <img id="pic1" src="achieve1.png">
-        </div>
-        <div id="a2">
-          <img id="pic2" src="achieve2.png">
-        </div>
-        <div id="a3">
-          <img id="pic3" src="achieve3.png">
-        </div>
-        <div id="a4">
-          <img id="pic4" src="achieve2.png">
-        </div>
-        <div id="a5">
-          <img id="pic5" src="achieve3.png">
-        </div>
-        <div id="a6">
-          <img id="pic6" src="achieve1.png">
-        </div>
-        <div id="a7">
-          <img id="pic7" src="achieve3.png">
-        </div>
-        <div id="a8">
-          <img id="pic8" src="achieve1.png">
-        </div>
-        <div id="a9">
-          <img id="pic9" src="achieve2.png">
-        </div>
-        <div id="content"></div>
-      </div>
-      -->
-
-      <div id="set">
-        <img id="set_back" class="back" src="./png/page_back.png" height="10%">
-        <div id="sound">Sound</div>
-        <label class="switch">
-          <input id="switch" type="checkbox">
-          <span class="slider round"></span>
-        </label>
-        <div id="container">
-          <div id="intro">
-            <b>大南門‧大榕樹</b>
-            <br>
-            <br> 一棵樹苗等待歲月的提拔
-            <br> 城樓建好的初瞬意氣風發
-            <br> 屹立不搖的身影
-            <br> 看透過往雲煙
-            <br> 我用我的茁壯
-            <br> 陪伴你的滄桑
-          </div>
-        </div>
-        <div id="frame">
-          <div id="about">About app</div>
-        </div>
-      </div>
+  		<div id="set">
+  			<img id="set_back" class="back" src="./png/page_back.png" height="10%">	
+  			<label class="switch">
+  				<input id="switch" type="checkbox">
+  				<span class="slider round"></span>
+  			</label>
+  			<img id="set_about" src="./png/set_about.png">
+  			<img id="set_about_content" src="./png/set_about_content.png">
+  			<img id="set_about_back" src="./png/game_back.png" height="5%">
+		  </div>
 
       <div id="friend">
-        <img id="friend_back" src="./png/page_back.png" height="10%">
-        <img id="friend1" src="./png/wood.png" height="13%">
-        <img id="friend2" src="./png/wood.png" height="18%">
-        <img id="friend3" src="./png/wood.png" height="15%">
-        <img id="friend4" src="./png/wood.png" height="16%">
-        <img id="friend5" src="./png/wood.png" height="17%">
-        <img id="friend6" src="./png/wood.png" height="14%">
-      </div>
+			  <img id="friend_bg" src="./png/friend_bg.png">
+			  <img id="friend_back" src="./png/page_back.png" height="10%">
+  			 <img id="friend_friend1" src="./png/friend_tree1.png">
+	  		<img id="friend_mark1" src="./png/friend_mark.png">
+	  		<img id="friend_photo1" src="./png/blank.png">
+	  		<img id="friend_friend2" src="./png/friend_tree1.png">
+	  		<img id="friend_mark2" src="./png/friend_mark.png">
+	  		<img id="friend_photo2" src="./png/blank.png">
+	  		<img id="friend_friend3" src="./png/friend_tree2.png">
+	  		<img id="friend_mark3" src="./png/friend_mark.png">
+	  		<img id="friend_photo3" src="./png/blank.png">
+	  		<img id="friend_friend4" src="./png/friend_tree3.png">
+	  		<img id="friend_mark4" src="./png/friend_mark.png">
+	  		<img id="friend_photo4" src="./png/blank.png">
+	  		<img id="friend_friend5" src="./png/friend_tree3.png">	
+	  		<img id="friend_mark5" src="./png/friend_mark.png">
+	  		<img id="friend_photo5" src="./png/blank.png">
+	  		<img id="friend_friend6" src="./png/friend_tree2.png">
+	  		<img id="friend_mark6" src="./png/friend_mark.png">
+	  		<img id="friend_photo6" src="./png/blank.png">
+	  		<img id="friend_friend7" src="./png/friend_tree1.png">
+	  		<img id="friend_mark7" src="./png/friend_mark.png">
+	  		<img id="friend_photo7" src="./png/blank.png">
+	  	</div>
 
       <div id="fake_friend">
 
       </div>
 
       <div id="story">
-        <img id="story_back" src="./png/page_back.png" height="10%">
-        <div class="page">
-          <div class="page__demo">
-            <div class="main-container page__container">
-              <div class="timeline">
-                <div class="timeline__group">
-                  <span class="timeline__year">2008</span>
-                  <div class="timeline__box">
-                    <div class="timeline__date">
-                      <span class="timeline__day">2</span>
-                      <span class="timeline__month">Feb</span>
-                    </div>
-                    <div class="timeline__post">
-                      <div class="timeline__content">
-                        <p>Attends the Philadelphia Museum School of Industrial Art. Studies design with Alexey Brodovitch, art director at Harper's Bazaar, and works as his assistant.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="timeline__box">
-                    <div class="timeline__date">
-                      <span class="timeline__day">1</span>
-                      <span class="timeline__month">Sept</span>
-                    </div>
-                    <div class="timeline__post">
-                      <div class="timeline__content">
-                        <p>Started from University of Pennsylvania. This is an important stage of my career. Here I worked in the local magazine. The experience greatly affected me</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="timeline__group">
-                  <span class="timeline__year">2014</span>
-                  <div class="timeline__box">
-                    <div class="timeline__date">
-                      <span class="timeline__day">14</span>
-                      <span class="timeline__month">Jul</span>
-                    </div>
-                    <div class="timeline__post">
-                      <div class="timeline__content">
-                        <p>Travels to France, Italy, Spain, and Peru. After completing fashion editorial in Lima, prolongs stay to make portraits of local people in a daylight studio</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="timeline__group">
-                  <span class="timeline__year">2016</span>
-                  <div class="timeline__box">
-                    <div class="timeline__date">
-                      <span class="timeline__day">28</span>
-                      <span class="timeline__month">Aug</span>
-                    </div>
-                    <div class="timeline__post">
-                      <div class="timeline__content">
-                        <p>Upon moving to Brooklyn that summer, I began photographing weddings in Chicago</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="timeline__group">
-                  <span class="timeline__year">2014</span>
-                  <div class="timeline__box">
-                    <div class="timeline__date">
-                      <span class="timeline__day">14</span>
-                      <span class="timeline__month">Jul</span>
-                    </div>
-                    <div class="timeline__post">
-                      <div class="timeline__content">
-                        <p>Travels to France, Italy, Spain, and Peru. After completing fashion editorial in Lima, prolongs stay to make portraits of local people in a daylight studio</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="timeline__group">
-                  <span class="timeline__year">2014</span>
-                  <div class="timeline__box">
-                    <div class="timeline__date">
-                      <span class="timeline__day">14</span>
-                      <span class="timeline__month">Jul</span>
-                    </div>
-                    <div class="timeline__post">
-                      <div class="timeline__content">
-                        <p>Travels to France, Italy, Spain, and Peru. After completing fashion editorial in Lima, prolongs stay to make portraits of local people in a daylight studio</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="timeline__group">
-                  <span class="timeline__year">2014</span>
-                  <div class="timeline__box">
-                    <div class="timeline__date">
-                      <span class="timeline__day">14</span>
-                      <span class="timeline__month">Jul</span>
-                    </div>
-                    <div class="timeline__post">
-                      <div class="timeline__content">
-                        <p>Travels to France, Italy, Spain, and Peru. After completing fashion editorial in Lima, prolongs stay to make portraits of local people in a daylight studio</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>            
+        
       </div>
 
   </div>
   <!--種樹頁面-->
   <div id="pbackground">
     <div id="plant">			
-      <b id="thisyear">1950</b>
+      <b id="thisyear">1724</b>
       <div id="timebar">
         <img id="timeicon" src="ICON2/時間軸.png" height="8%">
         <img id="timeline" src="ICON2/時間軸條.png">
@@ -248,42 +117,18 @@
 
       <img id="tool2" src="ICON2/澆水器按鈕.png" height="7%">
 
-      <img id="bigtree" src="ICON2/tree2.png">
+      <img id="bigtree" src="ICON2/tree5.png">
       <div>
         <img id="plantback" src="turtle/back.png">
       </div>
       <div id="window">
         <img src="ICON/enter.png">
-        <p>從葉脈深處傳來記
-          <br>憶的脈動，是否探
-          <br>索？</p>
+        <div id = "text">從葉脈深處傳來記憶的脈動，是否探索？</div>
         <button></button>
         <button></button>
       </div>
     </div>
 
-    <div id="shop">
-      <div class="price">200</div>
-      <div class="price">100</div>
-      <div class="price">50</div>
-      <div class="price">100</div>
-      <div class="price">100</div>
-      <div class="price">100</div>
-      <div class="price">100</div>
-      <div class="price">100</div>
-      <div class="price">100</div>
-
-      <img class="good" src="ICON/syringe.png" width="22%">
-      <img class="good" src="ICON/syringe2.png" width="22%">
-      <img class="good" src="ICON/syringe3.png" width="22%">
-      <img class="good" src="ICON/seed.png" width="22%">
-      <img class="good" src="ICON/seed2.png" width="22%">
-      <img class="good" src="ICON/seed3.png" width="22%">
-      <img class="good" src="ICON/shovel.png" width="22%">
-      <img class="good" src="ICON/shovel2.png" width="22%">
-      <img class="good" src="ICON/shovel3.png" width="22%">
-      <img id="shelves" src="ICON/shelves.png">
-    </div>
   </div>
   <!--種樹頁面-->
 
@@ -372,7 +217,7 @@
     </div>
   </div>
   <!--挖洞頁面-->
-
+  <script src="loginPage/login.js"></script>
   <script src="plant.js"></script>
   <script src="turtle.js"></script>
   <script src="2.js"></script>
