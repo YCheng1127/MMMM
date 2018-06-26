@@ -1,50 +1,176 @@
 #friend{
 	width: 100vw;
+	min-height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+#friend_bg{
 	height: 100vh;
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-image: url("./png/mountain.png");
-	background-repeat: no-repeat;
-	background-size: 100vw 100vh;
-}
+}	
 
 #friend_back{
 	position: absolute;
 	left: 3vw;
-	top: 6vh;
+	top: 2vh;
 }
 
-#friend1{
+#friend_friend1{
+	height: 35vh;
 	position: absolute;
-	top: 62%;
-	left: 3%;
+	top: 40vh;
+	left: 0;
 }
 
-#friend2{
+#friend_mark1{
+	width: 33vw;
 	position: absolute;
-	top: 80%;
-	left: 10%;
+	top: 28vh;
+	left: 14vw;
 }
 
-#friend3{
+#friend_photo1{
+	height: 9vh;
 	position: absolute;
-	top: 63%;
-	left: 33%;
+	top: 31vh;
+	left: 23vw;
+	border-radius: 50%;
+}
+
+#friend_friend2{
+	height: 35vh;
+	position: absolute;
+	top: 25vh;
+	left: 51vw;
+}
+
+#friend_mark2{
+	width: 33vw;
+	position: absolute;
+	top: 12vh;
+	left: 66vw;
+}
+
+#friend_photo2{
+	height: 9vh;
+	position: absolute;
+	top: 15vh;
+	left: 75vw;
+	border-radius: 50%;
+}
+
+#friend_friend3{
+	height: 35vh;
+	position: absolute;
+	top: 50vh;
+	left: 48vw;
 }	
 
-#friend4{
+#friend_mark3{
+	width: 33vw;
 	position: absolute;
-	top: 55%;
-	left: 60%;
+	top: 37vh;
+	left: 70vw;
 }
-#friend5{
+
+#friend_photo3{
+	height: 9vh;
 	position: absolute;
-	top: 82%;
-	left: 45%;
+	top: 40vh;
+	left: 79vw;
+	border-radius: 50%;
 }
-#friend6{
+
+#friend_friend4{
+	height: 35vh;
 	position: absolute;
-	top: 72%;
-	left: 75%;
-}	
+	top: 29vh;
+	left: 102vw;
+}
+
+#friend_mark4{
+	width: 33vw;
+	position: absolute;
+	top: 18vh;
+	left: 110vw;
+}
+
+#friend_photo4{
+	height: 9vh;
+	position: absolute;
+	top: 21vh;
+	left: 119vw;
+	border-radius: 50%;
+}
+
+#friend_friend5{
+	height: 35vh;
+	position: absolute;
+	top: 37vh;
+	left: 205vw;
+}
+
+#friend_mark5{
+	width: 33vw;
+	position: absolute;
+	top: 25vh;
+	left: 212vw;
+}
+
+#friend_photo5{
+	height: 9vh;
+	position: absolute;
+	top: 28vh;
+	left: 221vw;
+	border-radius: 50%;
+}
+
+#friend_friend6{
+	height: 35vh;
+	position: absolute;
+	top: 29vh;
+	left: 158vw;
+}
+
+#friend_mark6{
+	width: 33vw;
+	position: absolute;
+	top: 16vh;
+	left: 179vw;
+}
+
+#friend_photo6{
+	height: 9vh;
+	position: absolute;
+	top: 19vh;
+	left: 188vw;
+	border-radius: 50%;
+}
+
+#friend_friend7{
+	height: 35vh;
+	position: absolute;
+	top: 43vh;
+	left: 133vw;
+}
+
+#friend_mark7{
+	width: 33vw;
+	position: absolute;
+	top: 30vh;
+	left: 148vw;
+}
+
+#friend_photo7{
+	height: 9vh;
+	position: absolute;
+	top: 33vh;
+	left: 157vw;
+	border-radius: 50%;
+}
