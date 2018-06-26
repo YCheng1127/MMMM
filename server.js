@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 10130
+const port = 10129
 const bodyParser = require('body-parser')//post
 const https = require('https')
 const fs = require('fs')
@@ -38,12 +38,6 @@ var c = mysql.createConnection({
   database: 'uidd2018_groupM'
 });
 
-app.post("/getfrienddata",function(req, res){
-     
-      c.query("SELECT * FROM user WHERE id = '" + req.body.id + "'", function (err, d) {
-               res.send(JSON.stringify(d));
-                   })
-})
 
 var name = "";
 var id = 0;
@@ -150,7 +144,13 @@ w.on('connection', function (ws){
       })
     }
   });
+  ws.on('close', function (data) {
+    id = 0
+  })
 });
+
+
+
 
 
 
