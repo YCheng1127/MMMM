@@ -41,7 +41,7 @@ function timer() {
 				$("#timeline").animate({ "width": time * 0.17 + "%" }, 300);
 			}
 		}
-	})*/
+	})*///
 	setTimeout(function(){s.send("all",0)},5000)
 	s.onmessage = function (e){
 		console.log(e.data)
