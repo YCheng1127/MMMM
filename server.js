@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 10130
+const port = 10129
 const bodyParser = require('body-parser')//post
 const https = require('https')
 const fs = require('fs')
@@ -37,13 +37,7 @@ var c = mysql.createConnection({
   password: 'e24056051',
   database: 'uidd2018_groupM'
 });
-//getfriends
-app.post("/getfrienddata",function(req, res){
-     
-      c.query("SELECT * FROM user WHERE id = '" + req.body.id + "'", function (err, d) {
-               res.send(JSON.stringify(d));
-                   })
-})
+
 
 var name = "";
 var id = 0;
