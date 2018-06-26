@@ -139,8 +139,9 @@
           
           if(response.status==='connected'){
            /* document.getElementById("loginbutton").style.display = "none";*/
-            document.getElementById("logoutbutton").style.display = "block";
-            document.getElementById("FBlogin").style.display = "none";
+        
+           /* document.getElementById("logoutbutton").style.display = "block";*/
+           /* document.getElementById("FBlogin").style.display = "none";*/
           }
         },{scope: 'public_profile,email,user_friends'})
      }
