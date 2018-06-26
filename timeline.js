@@ -112,10 +112,6 @@ function story_click(){
 				document.getElementById('story_content_pic').style.display = 'block';
 				document.getElementById('story_content_pic').style.top = '63vh';
 			}
-			else if(story_target_slice=="1977"){
-				document.getElementById('story_content_text').innerHTML = '<b></b>';				
-				document.getElementById('story_content_pic').style.display = 'none';
-			}
 			$('#story_content').fadeIn("slow");
 			$('#story').css('overflowY','hidden');
 			console.log(story_target.id);

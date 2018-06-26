@@ -88,7 +88,7 @@
 }
 
 #story_click_1736_1{
-	//display: none;
+	display: none;
 	position: absolute;
 	top: 40vh;
 	left: 6vw;
@@ -97,7 +97,7 @@
 }
 
 #story_click_1736_2{
-	display: none;
+	//display: none;
 	position: absolute;
 	top: 40vh;
 	left: 6vw;
@@ -124,7 +124,7 @@
 }
 
 #story_click_1775_1{
-	//display: none;
+	display: none;
 	position: absolute;
 	top: 100vh;
 	left: 6vw;
@@ -133,7 +133,7 @@
 }
 
 #story_click_1775_2{
-	display: none;
+	//display: none;
 	position: absolute;
 	top: 100vh;
 	left: 6vw;
@@ -304,7 +304,7 @@
 }
 
 #story_click_1932_1{
-	//display: none;
+	display: none;
 	position: absolute;
 	top: 400vh;
 	left: 6vw;
@@ -313,7 +313,7 @@
 }
 
 #story_click_1932_2{
-	display: none;
+	//display: none;
 	position: absolute;
 	top: 400vh;
 	left: 6vw;
@@ -370,24 +370,6 @@
 	display: none;
 	position: absolute;
 	top: 490vh;
-	left: 6vw;
-	width: 75vw;
-	height: 25vh;
-}
-
-#story_click_1977_1{
-	//display: none;
-	position: absolute;
-	top: 520vh;
-	left: 6vw;
-	width: 75vw;
-	height: 25vh;
-}
-
-#story_click_1977_2{
-	display: none;
-	position: absolute;
-	top: 520vh;
 	left: 6vw;
 	width: 75vw;
 	height: 25vh;
