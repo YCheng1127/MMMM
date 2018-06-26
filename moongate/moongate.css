@@ -1,0 +1,72 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+
+#moongate_gamerule_content{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%,-50%);  
+  z-index: 1;
+}
+
+#moongate_gamerule_button{
+  width: 40vh;  
+  position: absolute;
+  left: 50vw;
+  bottom: 10vh;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+#moongate_bg{
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#moongate_people1{
+  position: absolute;
+  top: 35vh;
+  left: 25vw;
+}
+
+#moongate_people2{
+  position: absolute;
+  top: 33vh;
+  left: 72vw;
+}
+
+#moongate_people3{
+  position: absolute;
+  top: 37vh;
+  left: 62vw;
+} 
+
+#moongate_people4{
+  position: absolute;
+  top: 45vh;
+  left: 37vw;
+}
+
+#moongate_right_control{
+  position: absolute;
+  bottom: 8vh;
+  right: 5vw;
+}
+
+#moongate_left_control{
+  position: absolute;
+  bottom: 8vh;
+  left: 5vw;
+}
+
+#moongate_back{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
