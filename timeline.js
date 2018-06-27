@@ -9,7 +9,7 @@ function story_click(){
 		event.preventDefault();
 		var story_target = event.target.id;
 		var story_target_slice = story_target.slice(-2);
-		console.log(story_target, story_target_slice);
+		//console.log(story_target, story_target_slice);
 		
 		if(story_target_slice=="_1"){
 			story_target = document.getElementById(story_target);
