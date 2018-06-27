@@ -52,7 +52,7 @@ function make_tree_page(data){
   game_value.style.zIndex="5";
   game_value.style.left="3vw"
   if(GV[0]!=null)
-    game_value.innerHTML="<p>   "+GV[0].name+" 's Tree</p> <p>   Year: "+GV[0].year+"</p> <p>   TurtleScore:　" +GV[0].TurtleScore+"</p> <p>   CastleScore: "+GV[0].CastleScore;
+    game_value.innerHTML="<p>   "+GV[0].name+" 's Tree</p> <p>   Year: "+[GV[0].year+1724]+"</p> <p>   TurtleScore:　" +GV[0].TurtleScore+"</p> <p>   CastleScore: "+GV[0].CastleScore;
   else
     game_value.innerHTML="The Player doesn't exist";
   Page.appendChild(game_value);
@@ -64,6 +64,85 @@ function make_tree_page(data){
   right="3%";
   bottom="3%";
   killpage.innerHTML='<img id="killpagebutton" src="./png/game_back.png" onclick="killpage()">';
+  dropping2(15);
+  
+  /*
+	$("#friend_tree_page").on("click", ".leaf", function () {
+		id = $(this).attr("id").substr(4);
+		if (id == 0) {
+			$("#text").text("築城!!\n");
+		}
+		else if(id == 1){
+			$("#text").text("木城門升級磚城門\n");
+		}
+		else if(id == 2){
+			$("#text").text("加固竹城牆\n");
+		}
+		else if(id == 3){
+			$("#text").text("城外的魁斗山是公墓\n");
+		}
+		else if(id == 4){
+			$("#text").text("林爽文事件，木牆升級土牆\n"+txt);
+		}
+		else if(id == 5){
+			$("#text").text("張丙事件與月城\n"+txt);//game
+		}
+		else if(id == 6){
+			$("#text").text("城門上有示警碑\n");
+		}
+		else if(id == 7){
+			$("#text").text("城外變成射擊場\n");
+		}
+		else if(id == 8){
+			$("#text").text("城門存?廢?\n整理古碑_碑林前身");
+		}
+		else if(id == 9){
+			$("#text").text("重修城門I\n");
+		}
+		else if(id == 10){
+			$("#text").text("射擊場→體育場\n");
+		}
+		else if(id == 11){
+			$("#text").text("移建九龜碑\n");
+		}
+		else if(id == 12){
+			$("#text").text("我也要聽廣播\n");
+		}
+		else if(id == 13){
+			$("#text").text("全島大動員\n");
+		}
+		else if(id == 14){
+			$("#text").text("滿城風雨樓欲搖\n");
+		}
+		else if(id == 15){
+			$("#text").text("龜龜 不要走！\n"+txt);//game
+		}
+		else if(id == 16){
+			$("#text").text("重建城門II\n");
+		}
+		if ($("#leaf" + id).attr("src")[6] != "y")
+			$("#window").css("display", "flex");			
+	});*/
+
+}
+
+
+function dropping2(num){
+	var drop = 0
+	var n = 5 + Math.random() * 75;//振幅
+	var a = Math.random() * 6;//相角
+	var newleaf = leaf.clone();
+	newleaf.attr("id", "leaf" + num);
+	newleaf.attr("src", "ICON2/leaf" + Math.ceil(Math.random() * 3) + ".png");
+	newleaf.css({ "top": "30vh", "left": n + "vw", "position": "absolute" });
+	$("#friend_tree_page").append(newleaf);
+	dropid[num] = setInterval(function () {//落葉
+		newleaf.css({
+			"top": 30 + drop + "vh", "z-index":7, "left": n + 8 * Math.sin(drop / 2 + a) + "vw", "transform": "rotate(" + (Math.sin(drop/ 2 + a) * 25 - 10) + "deg)" });
+				drop += 0.16;
+			if(drop >= 45)
+		clearInterval(dropid[num]);
+	}, 16.6);
 }
 
 clickphoto=function(num){
@@ -80,3 +159,6 @@ clickphoto=function(num){
 killpage=function(){
   document.getElementById("friend_tree_page").remove();
 }
+
+
+	

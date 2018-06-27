@@ -10,7 +10,7 @@ var dropid = [0,0,0,0,0,0,0,0,0,0,0];
 var water = $("#water");
 var waterid = null;
 var txt= "\n\n從葉脈深處傳來記憶的脈動，是否探索？";
-var s = new WebSocket("wss://luffy.ee.ncku.edu.tw:10130/");
+var s = new WebSocket("wss://luffy.ee.ncku.edu.tw:10125/");
 
 function getdegree(obj) {
 	var matrix = obj.css("-webkit-transform") ||
