@@ -38,8 +38,8 @@
 #set_about_back{
 	display: none;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 1vh;
+	left: 1vw;
 }
 
 .switch{
