@@ -189,3 +189,9 @@
   left:7vw;
   z-index:4;
 }
+#killpagebutton{
+  position:absolute;
+  width:9vw;
+  bottom:3vh;
+  right:3vw;
+}
