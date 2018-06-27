@@ -24,7 +24,7 @@ function make_tree_page(data){
   Page.style.backgroundSize="100% 100%";
   Page.style.width="100%";
   Page.style.height="100%";
-  Page.style.position="absolute";
+  Page.style.position="fixed";
   Page.style.left="0%";
   Page.style.top="0%";
   Page.setAttribute("id","friend_tree_page");
