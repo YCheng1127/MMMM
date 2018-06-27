@@ -23,25 +23,15 @@ body{
 	position: absolute;
 	left: 0;
 	top: 0;
-	z-index: 4;
-	background-color: #ffffcc;
+	z-index: 3;
 }
 
-#logo{
-	height: 40vh;
+#loading_bg{
+	width: 100vw;
+	height: 100vh;
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
-}
-
-#load{
-	position: relative;
-	top: 70%;
-	text-align: center;
-	word-break: break-all;
-	font-size: 4vh;
-	font-family: sans-serif;
+	left: 0;
+	top: 0;
 }
 
 #login{
@@ -51,22 +41,20 @@ body{
 	left: 0;
 	top: 0;
 	z-index: 2;
-	background-color: #ffff99;
 }
 
-#log{
-	position: relative;
-	top: 35%;
-	text-align: center;
-	word-break: break-all;
-	font-size: 6vh;
-	font-family: sans-serif;
+#login_bg{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 #facebook{
 	position: absolute;
 	left: 50%; /*35%*/
-	top: 55%;
+	top: 50%; /*55%*/
 	transform: translate(-50%,-50%);
 	//width: 10vw;
 	//height: 10vh;

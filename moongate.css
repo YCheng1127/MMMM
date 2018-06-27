@@ -18,7 +18,7 @@
   width: 40vh;  
   position: fixed;
   left: 50vw;
-  bottom: 10vh;
+  top: 70vh;
   transform: translateX(-50%);
   z-index: 2;
 }
