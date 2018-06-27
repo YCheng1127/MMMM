@@ -36,6 +36,7 @@
 }
 
 #friend_photo1{
+	width: 9vh;
 	height: 9vh;
 	position: absolute;
 	top: 31vh;
@@ -58,6 +59,7 @@
 }
 
 #friend_photo2{
+	width: 9vh;
 	height: 9vh;
 	position: absolute;
 	top: 15vh;
@@ -80,6 +82,7 @@
 }
 
 #friend_photo3{
+	width: 9vh;
 	height: 9vh;
 	position: absolute;
 	top: 40vh;
@@ -102,6 +105,7 @@
 }
 
 #friend_photo4{
+	width: 9vh;
 	height: 9vh;
 	position: absolute;
 	top: 21vh;
@@ -109,21 +113,21 @@
 	border-radius: 50%;
 }
 
-#friend_friend5{
+#friend_friend7{
 	height: 35vh;
 	position: absolute;
 	top: 37vh;
 	left: 205vw;
 }
 
-#friend_mark5{
+#friend_mark7{
 	width: 33vw;
 	position: absolute;
 	top: 25vh;
 	left: 212vw;
 }
 
-#friend_photo5{
+#friend_photo7{
 	height: 9vh;
 	position: absolute;
 	top: 28vh;
@@ -146,6 +150,7 @@
 }
 
 #friend_photo6{
+	width: 9vh;
 	height: 9vh;
 	position: absolute;
 	top: 19vh;
@@ -153,24 +158,48 @@
 	border-radius: 50%;
 }
 
-#friend_friend7{
+#friend_friend5{
 	height: 35vh;
 	position: absolute;
 	top: 43vh;
 	left: 133vw;
 }
 
-#friend_mark7{
+#friend_mark5{
 	width: 33vw;
 	position: absolute;
 	top: 30vh;
 	left: 148vw;
 }
 
-#friend_photo7{
+#friend_photo5{
+	width: 9vh;
 	height: 9vh;
 	position: absolute;
 	top: 33vh;
 	left: 157vw;
 	border-radius: 50%;
+}
+
+#friend_tree{
+  display: block;
+  position:absolute;
+  left:8vw;
+  top: 30vh;
+  height:49vh;
+  width:93vw;
+}
+
+#friend_time{
+  position:absolute;
+  top:2vh;
+  left:7vw;
+  z-index:4;
+}
+
+#killpagebutton{
+  position:absolute;
+  width:9vw;
+  bottom:3vh;
+  right:3vw;
 }
