@@ -87,6 +87,7 @@ function main_forest_click(){
     event.preventDefault();
     $('#main').animate({left:w_width,opacity:0},1000);
     $('#friend').animate({left:0,opacity:1},1000);
+    make_friends_face();
   },false);
 }
 

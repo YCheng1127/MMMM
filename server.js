@@ -37,13 +37,15 @@ var c = mysql.createConnection({
   password: 'e24056051',
   database: 'uidd2018_groupM'
 });
-//getfriends
+
+
 app.post("/getfrienddata",function(req, res){
-     
-      c.query("SELECT * FROM user WHERE id = '" + req.body.id + "'", function (err, d) {
-               res.send(JSON.stringify(d));
-                   })
+   
+    c.query("SELECT * FROM user WHERE id = '" + req.body.id + "'", function (err, d) {
+       res.send(JSON.stringify(d));
+    })
 })
+
 
 var name = "";
 var id = 0;
@@ -150,7 +152,13 @@ w.on('connection', function (ws){
       })
     }
   });
+  ws.on('close', function (data) {
+    id = 0
+  })
 });
+
+
+
 
 
 

@@ -10,7 +10,7 @@ var dropid = [0,0,0,0,0,0,0,0,0,0,0];
 var water = $("#water");
 var waterid = null;
 var txt= "\n\n從葉脈深處傳來記憶的脈動，是否探索？";
-var s = new WebSocket("wss://luffy.ee.ncku.edu.tw:10129/");
+var s = new WebSocket("wss://luffy.ee.ncku.edu.tw:10130/");
 
 function getdegree(obj) {
 	var matrix = obj.css("-webkit-transform") ||
@@ -41,7 +41,7 @@ function timer() {
 				$("#timeline").animate({ "width": time * 0.17 + "%" }, 300);
 			}
 		}
-	})*/
+	})*///
 	setTimeout(function(){s.send("all",0)},5000)
 	s.onmessage = function (e){
 		console.log(e.data)
@@ -215,7 +215,7 @@ $(document).ready(function () {
 		}
 	});
 	$("#plant").on("click", ".leaf", function () {
-		id = $(this).attr("id")[4];
+		id = $(this).attr("id").substr(4);
 		if (id == 0) {
 			$("#text").text("築城!!\n");
 		}
@@ -267,7 +267,6 @@ $(document).ready(function () {
 		else if(id == 16){
 			$("#text").text("重建城門II\n");
 		}
-
 		if ($("#leaf" + id).attr("src")[6] != "y")
 			$("#window").css("display", "flex");			
 	});

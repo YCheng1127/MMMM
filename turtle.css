@@ -14,8 +14,8 @@
 #rules{
   position:absolute;
   width:100vw;
-  height:90vh;
-  top:6vh;
+  height:100vh;
+  top:0vh;
   z-index:3;
   display:block;
 }
@@ -29,7 +29,7 @@
   position:absolute;
   width:24%;
   left:52%;
-  top:77%;
+  top:82%;
   z-index:3;
 }
 
@@ -37,7 +37,7 @@
   position:absolute;
   width:24%;
   left:52%;
-  top:77%;
+  top:82%;
 }
 #Timesign{
   position:absolute;
@@ -45,12 +45,16 @@
   display:block;
   right:1vw;
   top:0vh;
+  font-size:5%
 }
 #Time{
   position:absolute;
-  font-family:fantasy;
+  font-family:monospace;
   display:block;
-  right:1vw;
+  left:8vw;
+  font-size:4vh;
+  top:8vh;
+  color:#383838;
 }
 #Scoresign{
   position:absolute;
@@ -60,18 +64,22 @@
 
 #Score{
   position:absolute;
-  font-family:fantasy;
+  font-family:monospace;
+  font-size:4vh;
+  top:8vh;
+  right:8vw;
+  color:#383838;
 }
 
 #turtle-bg{
   overflow:hidden;
   background-color:#66ffff;
-  width:80vw;
-  height:80vh;
+  width:100vw;
+  height:100vh;
   border:2px #6699cc groove;
   position: absolute;
-  top:10vh;
-  left:10vw;
+  top:0vh;
+  left:0vw;
   display:none;
 }
 
