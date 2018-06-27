@@ -1,4 +1,4 @@
-$(document).ready(function(){
+function moonstart(){
   // game start
   moongate_button_click();
 
@@ -19,8 +19,16 @@ $(document).ready(function(){
   moongate_right_control_click();
 
   // game back
-  moongate_back_click();
-});
+  //moongate_back_click();
+  var moongate_bk = document.getElementById('moongate_back');
+  moongate_bk.addEventListener('touchstart', function (event) {
+    event.preventDefault();
+    $("#moonbody").hide();
+    clearInterval(moongate_random_control);
+    clearInterval(moongate_random_control2);
+    return
+  }, false);
+}
 
 var moongate_ready = 0;
 var moongate_random_control;
@@ -252,8 +260,9 @@ function moongate_right_control_click(){
 function moongate_back_click(){
   var moongate_bk = document.getElementById('moongate_back');
   moongate_bk.addEventListener('touchstart',function(event){
-    event.preventDefault();
-    alert('not yet');
+    event.preventDefault();    
+    $("body > #pbackground").css("top", "0vh");
+    $("#moonbody").hide();
   },false);
 }
 
