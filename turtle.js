@@ -300,6 +300,12 @@ $("#window > button:nth-of-type(1)").click(function () {
 		$("#mbody").show();
 		$("#window").css("display", "none");
     }
+  else if(id == 5){
+    $("#moonbody").show();
+    $("#pbackground").css("top", "100vh");
+    $("#window").css("display", "none");
+    moonstart();
+  }  
   else
   {
     $("#window").css("display", "none");

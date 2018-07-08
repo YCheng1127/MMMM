@@ -9,13 +9,14 @@ function story_click(){
 		event.preventDefault();
 		var story_target = event.target.id;
 		var story_target_slice = story_target.slice(-2);
-		console.log(story_target, story_target_slice);
+		//console.log(story_target, story_target_slice);
 		
 		if(story_target_slice=="_1"){
 			story_target = document.getElementById(story_target);
 			story_target_slice = story_target.id.slice(12,16);
 			document.getElementById('story_content_text').style.fontSize = '3vh';
 			document.getElementById('story_content_pic').style.top = '60vh';
+			document.getElementById('story_content_pic').style.height = '60vw';
 			if(story_target_slice=="1725"){
 				document.getElementById('story_content_text').innerHTML = '<b>府城地區原本毫無設防，直到1725年3月，開始為府城地區建設木柵欄圍城牆，並建立七座木城門，四座大城門(東、西、南、北)、三座小城門(東、南、北)</b>';
 				document.getElementById('story_content_pic').style.display = 'none';
@@ -40,13 +41,14 @@ function story_click(){
 				document.getElementById('story_content_text').innerHTML = '<b>由於清廷對台政策的不當，使得地方官壓榨百姓，終於1786年（乾隆51年），台灣最大的地下組織「天地會」的北路領袖林爽文率民自彰化大里杙（今台中市大里區）起義。不久後，鳳山縣天地會領袖莊大田也率眾於南路響應。短短一個多月，除台灣府（今台南市）、諸羅縣（今嘉義市）、鹿港鎮外，均已攻陷。<br>直至一年三個月後（1788年），事件終於平息。<br>在此事件發生後，乾隆皇帝有感於城堅固之重要性，固准許臺灣從刺竹、木柵之構材改為三合土城；同時，為表彰平定此事件，特賜贔屭御碑（全名為清乾隆漢滿文御碑）予臺灣府。</b>';				
 				document.getElementById('story_content_pic').style.display = 'block';
 				document.getElementById('story_content_text').style.fontSize = '2vh';
-				document.getElementById('story_content_pic').style.top = '67vh';
+				document.getElementById('story_content_pic').style.top = '70vh';
+				document.getElementById('story_content_pic').style.height = '45vw';
 			}
 			else if(story_target_slice=="1835"){
 				document.getElementById('story_content_text').innerHTML = '<b>1832年，因臺灣夏季旱災造成稻作歉收，各鄉皆實施禁糴政策（禁止糧食流通）。有一商人陳壬癸在嘉義縣店仔口（今台南市白河區）私購數百石米，卻因政策的施行而無法運出，陳商便請託當地生員吳贊給予特權庇護運出莊外，途中卻被吳贊族人所劫。此時，吳贊卻指控為地方勢力張丙所為，嘉義知縣因此通緝張丙。同時，其友人陳辦也因與人發生械鬥而遭通緝。<br>張丙認為官府不公，而與陳辦二人一同起事、對抗官兵。期間，張丙聚集眾人數萬反抗官府，得到臺灣全區多地的響應，也曾佔領南部大部分縣市與雲林斗六門（今斗六）一帶。最後，因嘉義縣城久攻不下而漸平定。<br>事件後，臺灣府城建築外城，大南門也於此時增建了月城。</b>';				
 				document.getElementById('story_content_pic').style.display = 'block';
 				document.getElementById('story_content_pic').style.display = 'none';
-				document.getElementById('story_content_text').style.fontSize = '2.5	vh';
+				document.getElementById('story_content_text').style.fontSize = '2vh';
 			}
 			else if(story_target_slice=="1848"){
 				document.getElementById('story_content_pic').src = './png/story_pic_1848.png';

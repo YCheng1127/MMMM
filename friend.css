@@ -36,11 +36,13 @@
 }
 
 #friend_photo1{
+	width: 9vh;
 	height: 9vh;
 	position: absolute;
 	top: 31vh;
 	left: 23vw;
 	border-radius: 50%;
+  z-index:2
 }
 
 #friend_friend2{
@@ -58,11 +60,13 @@
 }
 
 #friend_photo2{
+	width: 9vh;
 	height: 9vh;
 	position: absolute;
 	top: 15vh;
 	left: 75vw;
 	border-radius: 50%;
+  z-index:2;
 }
 
 #friend_friend3{
@@ -80,11 +84,13 @@
 }
 
 #friend_photo3{
+	width: 9vh;
 	height: 9vh;
 	position: absolute;
 	top: 40vh;
 	left: 79vw;
 	border-radius: 50%;
+  z-index:2;
 }
 
 #friend_friend4{
@@ -102,11 +108,13 @@
 }
 
 #friend_photo4{
+	width: 9vh;
 	height: 9vh;
 	position: absolute;
 	top: 21vh;
 	left: 119vw;
 	border-radius: 50%;
+  z-index:2;
 }
 
 #friend_friend7{
@@ -124,11 +132,13 @@
 }
 
 #friend_photo7{
+  width: 9vw;
 	height: 9vh;
 	position: absolute;
 	top: 28vh;
 	left: 221vw;
 	border-radius: 50%;
+  z-index:2;
 }
 
 #friend_friend6{
@@ -146,11 +156,13 @@
 }
 
 #friend_photo6{
+	width: 9vh;
 	height: 9vh;
 	position: absolute;
 	top: 19vh;
 	left: 188vw;
 	border-radius: 50%;
+  z-index:2;
 }
 
 #friend_friend5{
@@ -168,11 +180,13 @@
 }
 
 #friend_photo5{
+	width: 9vh;
 	height: 9vh;
 	position: absolute;
 	top: 33vh;
 	left: 157vw;
 	border-radius: 50%;
+  z-index:2;
 }
 
 #friend_tree{
@@ -183,12 +197,14 @@
   height:49vh;
   width:93vw;
 }
+
 #friend_time{
   position:absolute;
   top:2vh;
   left:7vw;
   z-index:4;
 }
+
 #killpagebutton{
   position:absolute;
   width:9vw;

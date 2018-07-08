@@ -10,7 +10,9 @@ var dropid = [0,0,0,0,0,0,0,0,0,0,0];
 var water = $("#water");
 var waterid = null;
 var txt= "\n\n從葉脈深處傳來記憶的脈動，是否探索？";
+
 var s = new WebSocket("wss://luffy.ee.ncku.edu.tw:10125/");
+
 
 function getdegree(obj) {
 	var matrix = obj.css("-webkit-transform") ||
@@ -48,6 +50,8 @@ function timer() {
 		if (e.data.substr(1,1) == "a"){
 			time = e.data.substr(2);
 			num = e.data.substr(0,1)
+			if (time == 0)
+				setTimeout(function () { s.send("all", 0) }, 3000)
 		}
 		else{
 			time = e.data.substr(3);
@@ -116,7 +120,7 @@ function dropping(num){
 
 
 $(document).ready(function () {
-	
+	$("#moonbody").hide();
 	timer();
 	leaf.css({ "left": "10vw", "position": "relative" });
 
